@@ -101,9 +101,9 @@ function App() {
             className={`navbar ${scrolled ? 'scrolled' : ''} ${openBasic ? 'menu-open' : ''}`}
             fixed="top"
           >
-            <MDBContainer>
-              <MDBNavbarBrand href="#">
-                <img src={logo} style={{height:'100px'}} alt="Brand Logo" />
+            <MDBContainer fluid>
+              <MDBNavbarBrand className='mx-5' href="#">
+                <img src={logo} style={{ height: '100px' }} alt="Brand Logo" />
               </MDBNavbarBrand>
 
               <MDBNavbarToggler
@@ -163,28 +163,48 @@ function App() {
                     </MDBNavbarLink>
                   </MDBNavbarItem>
 
-                  <div className="language-selector  ms-5">
-                    <select
-                      className="custom-select"
-                      onChange={(e) => changeLanguage(e.target.value)}
-                    >
-                      <option value="en">
-                        <div className="d-flex align-items-center">
-                          <img src={enIcon} alt="English" width="20" className="me-2" /> English
+                  <MDBNavbarItem className="me-4">
+                    <MDBNavbarLink>
+                      <button class="download-btn mt-2 pixel-corners">
+                        <div class="button-content">
+                          <div class="svg-container">
+                            <svg
+                              class="download-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div class="text-container">
+                            <div class="text">Download PDF Catalog</div>
+                          </div>
                         </div>
-                      </option>
-                      <option value="ru">
-                        <div className="d-flex align-items-center">
-                          <img src={ruIcon} alt="Русский" width="20" className="me-2" /> Русский
-                        </div>
-                      </option>
-                      <option value="tm">
-                        <div className="d-flex align-items-center">
-                          <img src={tmIcon} alt="Türkmen" width="20" className="me-2" /> Türkmen
-                        </div>
-                      </option>
-                    </select>
-                  </div>
+                      </button>
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+
+                  <MDBNavbarItem className="me-4">
+                    <MDBNavbarLink>
+                       <img src={tmIcon} alt="" />
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+
+                  <MDBNavbarItem className="me-4">
+                    <MDBNavbarLink>
+                       <img src={ruIcon} alt="" />
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+
+                  <MDBNavbarItem className="me-4">
+                    <MDBNavbarLink>
+                       <img src={enIcon} alt="" />
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
                 </MDBNavbarNav>
               </MDBCollapse>
 

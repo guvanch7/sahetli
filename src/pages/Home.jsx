@@ -19,6 +19,9 @@ import {
 } from 'mdb-react-ui-kit';
 import '../style.css';
 import '../components/assets/graph.css'
+import constr1 from '../pages/assets/constr/constr1.jpg'
+import { Parallax, ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+
 
 import Header from '../components/Header';
 import Service from '../components/Service';
@@ -40,104 +43,44 @@ function Home() {
     return (
         <>
             <Header />
-            <MDBContainer style={{ backgroundColor: '#f2f1f0' }} fluid>
 
-
-                <MDBContainer >
-                    <div className='d-lg-flex justify-content-between py-5 align-items-center'>
-                        <MDBCol className='my-5' lg={6}  >
-                            <h1 className='text-black ' style={{ fontWeight: '600' }}>Who we are</h1>
-                            <div className='d-flex'>
-                                <div className='line2'></div>
-                                <h6 className='logo-color'>About Us</h6>
-                            </div>
-                            <p>We are a forward-thinking organization committed to utilizing advanced technologies and innovative approaches to create sustainable solutions for industries worldwide. Our mission is to integrate environmentally responsible practices into our operations, ensuring that our products and services contribute positively to the well-being of the planet and its people.
-                            </p>
-
-                            {/* <div>
-                                <MDBContainer>
-                                    <MDBRow>
-                                        <MDBCol className='mt-3' lg={6}>
-                                            <MDBCard className='shadow-3-strong py-2' style={{ backgroundColor: '#f2f1f0' }}>
-                                                <div className='d-flex align-items-center'>
-                                                    <div className='ps-2'>
-                                                        <MDBIcon fas icon="hard-hat rounded-7 bg-white p-2" style={{ color: '#ff6600' }} size='2x' />
-                                                    </div>
-                                                    <div className='d-block px-2'>
-                                                        <h5 className='text-black'>Design-Build Services</h5>
-                                                        <p>Design-Build Services simplify projects.</p>
-                                                    </div>
-
-                                                </div>
-                                            </MDBCard>
-                                        </MDBCol>
-                                        <MDBCol className='mt-3' lg={6}>
-                                            <MDBCard className='shadow-3-strong py-2' style={{ backgroundColor: '#f2f1f0' }}>
-                                                <div className='d-flex align-items-center'>
-                                                    <div className='ps-2'>
-                                                        <MDBIcon fas icon="hard-hat rounded-7 bg-white p-2" style={{ color: '#ff6600' }} size='2x' />
-                                                    </div>
-                                                    <div className='d-block px-2'>
-                                                        <h5 className='text-black'>Building Costs</h5>
-                                                        <p  >Design-Build Services simplify projects.</p>
-                                                    </div>
-
-                                                </div>
-                                            </MDBCard>
-                                        </MDBCol>
-                                        <MDBCol className='mt-3' lg={6}>
-                                            <MDBCard className='shadow-3-strong py-2' style={{ backgroundColor: '#f2f1f0' }}>
-                                                <div className='d-flex align-items-center'>
-                                                    <div className='ps-2'>
-                                                        <MDBIcon fas icon="hard-hat rounded-7 bg-white p-2" style={{ color: '#ff6600' }} size='2x' />
-                                                    </div>
-                                                    <div className='d-block px-2'>
-                                                        <h5 className='text-black'>Construction Costs</h5>
-                                                        <p  >Design-Build Services simplify projects.</p>
-                                                    </div>
-
-                                                </div>
-                                            </MDBCard>
-                                        </MDBCol>
-
-                                        <MDBCol className='mt-3' lg={6}>
-                                            <MDBCard className='shadow-3-strong py-2' style={{ backgroundColor: '#f2f1f0' }}>
-                                                <div className='d-flex align-items-center'>
-                                                    <div className='ps-2'>
-                                                        <MDBIcon fas icon="hard-hat rounded-7 bg-white p-2" style={{ color: '#ff6600' }} size='2x' />
-                                                    </div>
-                                                    <div className='d-block px-2'>
-                                                        <h5 className='text-black'>Industrial Pricing</h5>
-                                                        <p  >Design-Build Services simplify projects.</p>
-                                                    </div>
-
-                                                </div>
-                                            </MDBCard>
-                                        </MDBCol>
-                                    </MDBRow>
-
-                                </MDBContainer>
-
-                            </div> */}
-
-                        </MDBCol>
-
-
-
-                        <MDBCol className='mt-5' lg={5}>
-                            <img src={work1} className='img-fluid' alt="" />
-                        </MDBCol>
-
-                    </div>
-
-
-                </MDBContainer>
-            </MDBContainer>
             <Service />
+            <ParallaxProvider>
+                <ParallaxBanner className='bg-image'
+                    layers={[
+                        { image: constr1, speed: 40 },
+                        {
+                            speed: -15,
+                            children: (
+                                <div className='mask ' style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                    marginTop: '60px'
+
+                                }}>
+                                    <MDBContainer>
+
+                                        <h1 className='text-white mt-7' style={{ fontWeight: '600' }}>Biz Barada</h1>
+                                        <div className='d-flex'>
+                                            <div className='line2'></div>
+                                            <h6 className='logo-color'>Biziň kompaniýamyz</h6>
+                                        </div>
+                                        <MDBCol className='text-white'>
+                                            <p>Kärhananyň esasy maksady dünýa bazarynda öz ornuny ýokary hilli  önümçilikler we hyzmatlar bilen tanatmak. </p>
+                                            <h6>Önümçilikde:</h6>
+                                            <p>Esasan nebit-gaz himiýa we beýleki pudaklarda senagat howpsuzlygy, hill we ölçegleriň takyklygy boýunça hyzmat işlerini ýerine ýetirmek.  </p>
+                                        </MDBCol>
+                                    </MDBContainer>
+                                </div>
+                            ),
+                        },
+                    ]}
+                    style={{ aspectRatio: '5 / 1' }}
+                />
+            </ParallaxProvider>
 
             <MDBContainer>
                 <MDBRow>
-                   <CarouselCert />
+                    <CarouselCert />
                 </MDBRow>
             </MDBContainer>
 
