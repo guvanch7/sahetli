@@ -80,10 +80,10 @@ const Service = () => {
         <MDBContainer className="py-5">
             <MDBRow className="justify-content-evenly">
                 <MDBCol lg={5}>
-                    <div className="position-relative rounded-8 overflow-hidden" style={{ height: '600px' }}>
+                    <div className="position-relative rounded-8 overflow-hidden"  style={{ height: '600px' }}>
                         {/* Фоновое изображение */}
                         <AnimatePresence mode="wait">
-                            <motion.div
+                            <motion.div 
                                 key={current.image}
                                 className="position-absolute w-100 h-100"
                                 style={{
@@ -103,14 +103,14 @@ const Service = () => {
 
                         {/* Текст поверх маски */}
                         {/* Текст поверх маски */}
-                        <div className="mask w-100 h-100 position-absolute" style={{
+                        <div className="mask w-100 h-100 position-absolute"  style={{
                             backgroundColor: 'rgba(0, 0, 0, 0.4)',
                             zIndex: 2,
                             top: 0,
                             left: 0
                         }}>
                             <MDBContainer className="h-100 d-flex px-5 flex-column justify-content-center">
-                                <AnimatePresence mode="wait">
+                                <AnimatePresence mode="wait" >
                                     <motion.div
                                         key={current.title}
                                         initial="initial"
@@ -118,7 +118,7 @@ const Service = () => {
                                         exit="exit"
                                     >
                                         {/* Subtitle с задержкой 0s */}
-                                        <motion.div
+                                        <motion.div  
                                             variants={{
                                                 initial: { opacity: 0, y: 20 },
                                                 animate: {
@@ -133,7 +133,7 @@ const Service = () => {
                                                 }
                                             }}
                                         >
-                                            <div className='d-flex mb-4 align-items-center'>
+                                            <div className='d-flex mb-4 align-items-center' >
                                                 <div className='line3'></div>
                                                 <h6 className='logo-color fw-bolder mb-2'>{current.subtitle}</h6>
                                             </div>
@@ -190,16 +190,16 @@ const Service = () => {
                         
                     </MDBTabs>
 
-                    <MDBTabsContent>
+                    <MDBTabsContent data-aos='fade-left'>
                         <MDBTabsPane open={basicActive === 'tab1'}>
 
 
 
                             <div className='d-flex mt-2 '>
                                 <div className='line3'></div>
-                                <h4 className='logo-txt-color fw-bolder mb-2'>Наша компания</h4>
+                                <h4 className='logo-txt-color fw-bolder mb-2' >Наша компания</h4>
                             </div>
-                            <p>Мы — компания с многолетним опытом в области профессиональной очистки и обслуживания систем вентиляции на промышленных объектах.
+                            <p >Мы — компания с многолетним опытом в области профессиональной очистки и обслуживания систем вентиляции на промышленных объектах.
                                 В ответ на растущие потребности рынка и наших клиентов, мы расширили спектр услуг и сегодня также являемся
                                 надёжным поставщиком специализированного оборудования и материалов для нефтегазовой отрасли.</p>
 
