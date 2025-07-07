@@ -149,7 +149,7 @@ function App() {
 
                   <MDBNavbarItem className="me-3">
                     <MDBNavbarLink>
-                      <Link to="/about" className="nav-link">
+                      <Link to="/ " className="nav-link">
                         О нас
                       </Link>
                     </MDBNavbarLink>
@@ -161,8 +161,8 @@ function App() {
                         Услуги
                       </MDBDropdownToggle>
                       <MDBDropdownMenu>
-                        <MDBDropdownItem link><Link to='/construction'>Вентиляционные системы</Link></MDBDropdownItem>
-                        <MDBDropdownItem link><Link to='laboratory'>Нефтегазовая отрасль</Link></MDBDropdownItem>
+                        <MDBDropdownItem link><Link to='/ '>Вентиляционные системы</Link></MDBDropdownItem>
+                        <MDBDropdownItem link><Link to=' '>Нефтегазовая отрасль</Link></MDBDropdownItem>
                       </MDBDropdownMenu>
                     </MDBDropdown>
                   </MDBNavbarItem>
@@ -170,7 +170,7 @@ function App() {
 
                   <MDBNavbarItem className="me-3">
                     <MDBNavbarLink>
-                      <Link to="/contacts" className="nav-link">
+                      <Link to="/ " className="nav-link">
                         Контакты
                       </Link>
                     </MDBNavbarLink>
