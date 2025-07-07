@@ -49,7 +49,7 @@ import Home from './pages/Home';
 // import Certifications from './pages/Certifications';
 import Construction from './pages/Construction';
 import Contacts from './pages/Contacts';
-import LangDrop from './components/langDrop';
+import LangDrop from './components/LangDrop';
 
 function App() {
   const [openBasic, setOpenBasic] = useState(false);

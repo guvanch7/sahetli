@@ -43,6 +43,7 @@ import contacts from '../assets/image/contacts.png'
 import oilgas from '../assets/image/oilgas.jpg'
 import oilgas2 from '../assets/image/oilgas2.jpg'
 import hvac from '../assets/image/hvac.jpg'
+import hvac2 from '../assets/image/hvac2.jpg'
 import oilBg from '../assets/image/bg-oil.jpg'
 import podhod from '../assets/icons/processing.png'
 import quality from '../assets/icons/award.png'
@@ -128,7 +129,7 @@ function Home() {
                                     <h2 className='fw-bolder text-center display-5'>+{cleaningCounter2}</h2>
                                     <h5 className='text-center'>Современных  оборудований</h5>
                                 </div>
-                                <img src={hvac} className='img-fluid rounded-9' alt="" />
+                                <img src={hvac2} className='img-fluid rounded-9' alt="" />
                             </MDBCol>
                         </MDBRow>
                     </MDBCol>
@@ -256,7 +257,7 @@ function Home() {
                         <div class="list-2__item ">
                             <div class="we-work__item bg-light px-5 py-4 rounded-2xl   ">
                                 <div class="we-work__img  mb-4">
-                                    <img loading="lazy" src={podhod} alt="" />
+                                    <img loading="lazy" style={{width:'6rem'}} src={podhod} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
                                     Комплексный подход
@@ -275,7 +276,7 @@ function Home() {
                         <div class="list-2__item ">
                             <div class="we-work__item bg-light px-5 py-4 rounded-2xl   ">
                                 <div class="we-work__img  mb-4">
-                                    <img loading="lazy img-fluid" src={quality} alt="" />
+                                    <img loading="lazy img-fluid" style={{width:'6rem'}} src={quality} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
                                     Высокое качество и надёжность
@@ -295,7 +296,7 @@ function Home() {
                         <div class="list-2__item ">
                             <div class="we-work__item bg-light px-5 py-4 rounded-2xl   ">
                                 <div class="we-work__img  mb-4">
-                                    <img loading="lazy" src={productivity} alt="" />
+                                    <img loading="lazy" style={{width:'6rem'}} src={productivity} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
                                     Оперативность и гибкость
@@ -314,7 +315,7 @@ function Home() {
                         <div class="list-2__item ">
                             <div class="we-work__item bg-light px-5 py-4 rounded-2xl   ">
                                 <div class="we-work__img  mb-4">
-                                    <img loading="lazy" src={support} alt="" />
+                                    <img loading="lazy" style={{width:'6rem'}} src={support} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
                                     Экспертизу и поддержку

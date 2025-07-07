@@ -537,3 +537,8 @@ textarea::placeholder {
 .rounded-2xl {
     border-radius: 1rem;
 }
+
+.show{
+  background-color: white;
+  border-radius: 1rem;
+}
