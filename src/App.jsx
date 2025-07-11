@@ -142,7 +142,7 @@ function App() {
                   <MDBNavbarItem className="me-3">
                     <MDBNavbarLink className="nav-link">
                       <Link to="/" className="nav-link">
-                        Главная
+                          {t("navLink")}
                       </Link>
                     </MDBNavbarLink>
                   </MDBNavbarItem>
@@ -150,7 +150,7 @@ function App() {
                   <MDBNavbarItem className="me-3">
                     <MDBNavbarLink>
                       <Link to="/ " className="nav-link">
-                        О нас
+                        {t("navLink3")}
                       </Link>
                     </MDBNavbarLink>
                   </MDBNavbarItem>
@@ -158,11 +158,13 @@ function App() {
                   <MDBNavbarItem className="me-3">
                     <MDBDropdown>
                       <MDBDropdownToggle tag="a" className="nav-link" role="button">
-                        Услуги
+                        {t("navLink2")}
                       </MDBDropdownToggle>
                       <MDBDropdownMenu>
-                        <MDBDropdownItem link><Link to='/ '>Вентиляционные системы</Link></MDBDropdownItem>
-                        <MDBDropdownItem link><Link to=' '>Нефтегазовая отрасль</Link></MDBDropdownItem>
+                        <MDBDropdownItem link><Link to=' '>{t("oilgas")}</Link></MDBDropdownItem>
+                        <MDBDropdownItem link><Link to=' '>{t("vehicle")}</Link></MDBDropdownItem>
+                        <MDBDropdownItem link><Link to=' '>{t("electric")}</Link></MDBDropdownItem>
+                        <MDBDropdownItem link><Link to='/ '>{t("hvac")}</Link></MDBDropdownItem>
                       </MDBDropdownMenu>
                     </MDBDropdown>
                   </MDBNavbarItem>
@@ -171,7 +173,7 @@ function App() {
                   <MDBNavbarItem className="me-3">
                     <MDBNavbarLink>
                       <Link to="/ " className="nav-link">
-                        Контакты
+                        {t("navLink4")}
                       </Link>
                     </MDBNavbarLink>
                   </MDBNavbarItem>

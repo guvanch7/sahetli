@@ -4,14 +4,20 @@ import '../pages/pagecss.css';
 import tmIcon from '../assets/icons/TM.png';
 import ruIcon from '../assets/icons/RU.png';
 import enIcon from '../assets/icons/EN.png';
+import { useTranslation } from 'react-i18next';
 
 function LangDrop() {
+
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
     const [selectedLang, setSelectedLang] = useState('ru');
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
     const flags = {
-        tk: tmIcon,
+        tm: tmIcon,
         ru: ruIcon,
         en: enIcon,
     };
@@ -53,16 +59,18 @@ function LangDrop() {
             </button>
 
             <div
-                className={`lang-menu ${
-                    typeof window !== 'undefined' && window.innerWidth < 992 ? 'lang-menu--mobile' : ''
-                }`}
+                className={`lang-menu ${typeof window !== 'undefined' && window.innerWidth < 992 ? 'lang-menu--mobile' : ''
+                    }`}
             >
                 {Object.entries(flags).map(([lang, imgSrc]) => (
                     <button
                         key={lang}
                         className="lang-option lang-btn"
                         data-lang={lang}
-                        onClick={() => handleLangChange(lang)}
+                        onClick={() => {
+                            handleLangChange(lang);
+                            changeLanguage(lang);
+                        }}
                     >
                         <img loading="lazy" src={imgSrc} alt={lang.toUpperCase()} />
                     </button>

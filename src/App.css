@@ -542,3 +542,17 @@ textarea::placeholder {
   background-color: white;
   border-radius: 1rem;
 }
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right:  0.2rem;
+        padding-left:  0.2rem;
+    }
+}
+
+.img-secondary {
+  top: 400px;        /* вертикальное смещение */
+  left: 270px;       /* горизонтальное смещение */
+  z-index: 2;       /* чтобы быть поверх */
+}

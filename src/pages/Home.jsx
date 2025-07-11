@@ -32,10 +32,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Button from '../components/Button';
+import Vehicle from '../components/Vehicle';
 import Header from '../components/Header';
 import Service from '../components/Service';
-import Recommend from '../components/Recommend';
-import CarouselCert from '../components/CarouselCert';
+import Electric from '../components/Electric';
+// import CarouselCert from '../components/CarouselCert';
 import Form from '../components/Form';
 import Graph from '../components/Graph';
 // import work1 from '../assets/image/work1.png'
@@ -46,6 +47,7 @@ import oilgas from '../assets/image/oilgas.jpg'
 import oilgas2 from '../assets/image/oilgas2.jpg'
 import hvac from '../assets/image/hvac.jpg'
 import hvac2 from '../assets/image/hvac2.jpg'
+
 import oilBg from '../assets/image/bg-oil.jpg'
 import podhod from '../assets/icons/processing.png'
 import quality from '../assets/icons/award.png'
@@ -66,6 +68,7 @@ import techSupport from '../assets/icons/customer-service.png'
 
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ElectricScrollSection from '../components/Electric';
 
 function Home() {
     const { t, i18n } = useTranslation();
@@ -114,6 +117,62 @@ function Home() {
             <Service />
 
 
+            <MDBContainer className="bg-image"
+                style={{
+                    height: '800px',
+                    backgroundPosition: 'center',
+                    backgroundImage: `url(${oilBg})`,
+                    transition: '1s' // Фиксированное изображение
+                }} fluid>
+                <MDBContainer>
+                    <MDBRow>
+                        <div className='d-flex mt-5 '>
+                            <div className='line3'></div>
+                            <h4 className='logo-txt-color fw-bolder '>Нефтяные решения</h4>
+
+
+                        </div>
+
+                        <MDBCol lg={6}>
+                            <h2 className='text-black fw-bolder'>Поставка оборудования для <span className='logo-txt-color'> нефтяной отрасли</span></h2>
+
+                            <p>Также мы редлагаем надёжные решения по поставке специализированного оборудования и материалов
+                                для нефтяной отрасли.</p>
+
+                            <img src={oilgas} className='img-fluid rounded-9' alt="" />
+                        </MDBCol>
+
+                        <MDBCol lg={6}>
+                            <img src={oilgas2} className='img-fluid rounded-9' alt="" />
+                            <h2 className='text-black fw-bolder'>Почему клиенты выбирают <br />  <span className='logo-color' data-aos='fade-right' data-aos-duration="520" data-aos-delay="300"> Sahetli Hyzmat?</span></h2>
+
+                            <div className='row justify-content-center '>
+
+                                <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="300">
+                                    <img src={trusted} style={{ width: '4rem' }} alt="" />
+                                    <p className='text-black fw-bold'>Качество и надёжность</p>
+                                </div>
+
+                                <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="400">
+                                    <img src={logistic} style={{ width: '4rem' }} alt="" />
+                                    <p className='text-black fw-bold'>Оперативная логистика</p>
+                                </div>
+
+                                <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="500">
+                                    <img src={techSupport} style={{ width: '4rem' }} alt="" />
+                                    <p className='text-black fw-bold'>Техническая поддержка</p>
+                                </div>
+                            </div>
+
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
+            </MDBContainer>
+
+
+            <Vehicle />
+
+            <ElectricScrollSection />
 
             <MDBContainer className='mb-6'>
                 <MDBRow>
@@ -245,14 +304,14 @@ function Home() {
 
 
             <MDBContainer
-                className="counters-container"
+                className="counters-container mt-4"
                 style={{
                     position: 'relative',
                     marginTop: '-50px',
                     zIndex: 2,
                 }}
             >
-                <MDBRow className="justify-content-lg-  text-black">
+                <MDBRow className="justify-content-lg-  mt-5 text-black">
                     <div className='d-flex mt-5 '>
                         <div className='line3'></div>
                         <h4 className='logo-txt-color fw-bolder '>Обратившись к нам вы получите:</h4>
@@ -338,57 +397,8 @@ function Home() {
             </MDBContainer>
 
 
-            <MDBContainer className="bg-image"
-                style={{
-                    height: '800px',
-                    backgroundPosition: 'center',
-                    backgroundImage: `url(${oilBg})`,
-                    transition: '1s' // Фиксированное изображение
-                }} fluid>
-                <MDBContainer>
-                    <MDBRow>
-                        <div className='d-flex mt-5 '>
-                            <div className='line3'></div>
-                            <h4 className='logo-txt-color fw-bolder '>Нефтегазовые решения</h4>
 
 
-                        </div>
-
-                        <MDBCol lg={6}>
-                            <h2 className='text-black fw-bolder'>Поставка оборудования для <span className='logo-txt-color'> нефтегазовой отрасли</span></h2>
-
-                            <p>Также мы редлагаем надёжные решения по поставке специализированного оборудования и материалов
-                                для нефтегазовой отрасли.</p>
-
-                            <img src={oilgas} className='img-fluid rounded-9' alt="" />
-                        </MDBCol>
-
-                        <MDBCol lg={6}>
-                            <img src={oilgas2} className='img-fluid rounded-9' alt="" />
-                            <h2 className='text-black fw-bolder'>Почему клиенты выбирают <br />  <span className='logo-color' data-aos='fade-right' data-aos-duration="520" data-aos-delay="300"> Sahetli Hyzmat?</span></h2>
-
-                            <div className='row justify-content-center '>
-
-                                <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="300">
-                                    <img src={trusted} style={{ width: '4rem' }} alt="" />
-                                    <p className='text-black fw-bold'>Качество и надёжность</p>
-                                </div>
-
-                                <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="400">
-                                    <img src={logistic} style={{ width: '4rem' }} alt="" />
-                                    <p className='text-black fw-bold'>Оперативная логистика</p>
-                                </div>
-
-                                <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="500">
-                                    <img src={techSupport} style={{ width: '4rem' }} alt="" />
-                                    <p className='text-black fw-bold'>Техническая поддержка</p>
-                                </div>
-                            </div>
-
-                        </MDBCol>
-                    </MDBRow>
-                </MDBContainer>
-            </MDBContainer>
 
 
             <MDBContainer className='mt-5'>

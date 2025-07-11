@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import {
     MDBRow,
@@ -13,15 +13,13 @@ import { useTranslation } from "react-i18next";
 
 import slider1 from '../assets/sliders/slider1.jpg'
 import slider2 from '../assets/sliders/slider2.jpg'
+import slider3 from '../assets/sliders/slider3.jpg'
+import slider4 from '../assets/sliders/slider4.jpg'
 
 
 import '../App.css';
 
-const slides = [
-    { image: slider1, text: "Очистка и обслуживание систем вентиляции" },
-    { image: slider2, text: "Сервисное и гарантийное обслуживание" },
-    { image: slider1, text: "Поставка оборудования для нефтегазовой отрасли" },
-];
+
 function Header() {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -31,10 +29,23 @@ function Header() {
         i18n.changeLanguage(language);
     };
 
-     const handleSlideChange = (index) => {
+    const handleSlideChange = (index) => {
         setActiveIndex(index);
     };
 
+    const slides = [
+        { image: slider1, text: `${t("header1")}` },
+        { image: slider2, text: `${t("header2")}` },
+        { image: slider3, text: `${t("header3")}` },
+        { image: slider4, text: `${t("header4")}` },
+    ];
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
+        }, 5000); // 5000 мс = 5 секунд
+
+        return () => clearInterval(interval); // очищаем интервал при размонтировании
+    }, [slides.length]);
     return (
         <>
             <div className="header-container">
@@ -44,6 +55,7 @@ function Header() {
                         <motion.img
                             key={slides[activeIndex].image}
                             src={slides[activeIndex].image}
+
                             className="background-image"
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
