@@ -282,15 +282,16 @@ function App() {
                     <h6 className='text-uppercase fw-bold mb-4'>Habarlaşmak üçin</h6>
                     <p>
                       <MDBIcon color='secondary' icon='home' className='me-2' />
-                      Turkmenistan, Ahal wel.,
+                      Туркменистан, г. Ашхабад, ул. Нобат Багшы (Ленинградская) дом-2
                     </p>
                     <p>
                       <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                      salesmanager@.com.tm
+                       email@email.com
+                       
                     </p>
                     <p>
                       <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                      developmanager@.com.tm
+                       email@email.com
                     </p>
                     <p>
                       <MDBIcon color='secondary' icon='phone' className='me-3' /> +993 (65) 323-912-123
