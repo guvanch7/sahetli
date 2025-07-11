@@ -83,6 +83,6 @@
  }
 
  .open_contact {
-     visibility: visible !important;
+     display: block !important;
      animation: fadeIn 1s;
  }

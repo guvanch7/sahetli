@@ -286,15 +286,17 @@ function App() {
                     </p>
                     <p>
                       <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                       email@email.com
+                       info@sahetli.com
                        
                     </p>
+                    
                     <p>
-                      <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                       email@email.com
+                      <MDBIcon color='secondary' icon='phone' className='me-3' /> +993 (65) 56 84 67
                     </p>
+
                     <p>
-                      <MDBIcon color='secondary' icon='phone' className='me-3' /> +993 (65) 323-912-123
+                      <MDBIcon color='secondary' icon='fax' className='me-3' />
+                       +993 (12) 76 11 85
                     </p>
                     <p>
                     </p>
