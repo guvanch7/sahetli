@@ -85,7 +85,7 @@ function About() {
                         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        SÄHETLI ÖNÜM
+                        SÄHETLI HYZMAT
                     </motion.h1>
 
                     <MDBCol lg={6}>
