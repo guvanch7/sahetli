@@ -1,0 +1,88 @@
+ #contact_button {
+     position: fixed;
+     z-index: 9999;
+     bottom: 20px;
+     right: 20px;
+ }
+
+ #contact_button a {
+     display: flex;
+     border-radius: 50%;
+     width: 70px;
+     height: 70px;
+     box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.5);
+ }
+
+ #contact_button img {
+     margin: auto;
+ }
+
+ #contact_button #contact_button_child a {
+     margin-bottom: 10px;
+ }
+
+ @keyframes wave {
+     0% {
+         box-shadow: 0 0 0px 0px rgba(255, 121, 121, 0.5);
+     }
+
+     100% {
+         box-shadow: 0 0 0px 10px rgba(255, 121, 121, 0.271);
+     }
+ }
+
+ #contact_button_main {
+     background-color: #5eca1f;
+     animation: wave 1s linear infinite;
+ }
+
+ .contact_button_zalo {
+     background-color: #00B2FF;
+ }
+
+ .contact_button_map {
+     background-color: #c21111;
+ }
+
+ .contact_button_mail {
+     background-color: #eabe0f;
+ }
+
+ .contact_button_facebook {
+     background-color: #4267B2;
+ }
+
+ #contact_button #contact_button_phone {
+     background-color: #007941;
+     color: #eee;
+     font-size: 18px;
+     text-decoration: unset;
+     align-items: center;
+     border-radius: 5px;
+     padding: 0px 10px;
+     position: fixed;
+     right: 105px;
+     bottom: 25px;
+     width: auto;
+     height: 50px;
+     font-weight: 900;
+ }
+
+ #contact_button #contact_button_phone img {
+     margin-right: 5px;
+ }
+
+ @keyframes fadeIn {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }
+
+ .open_contact {
+     display: block !important;
+     animation: fadeIn 1s;
+ }

@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+h1,
+div,
+ol,
+ul,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+Link,
+.navlink,
+p,
+span,
+select,
+option {
+  font-family: 'Montserrat';
+}
+
+.mt-7 {
+  margin-top: 7rem !important;
+}
+
+.ms-8 {
+  margin-left: 8rem !important;
+}
+
+@media (max-width: 576px) {
+  .col-xs-5 {
+    flex: 0 0 auto;
+    width: 61.66666667%;
+  }
+
+}
+
+/* From Uiverse.io by d3uceY */
+.download-btn {
+  height: 45px;
+  width: max-content;
+  cursor: pointer;
+  background: white;
+  border: none;
+  background: #ff0021;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.button-content {
+  transform: translateY(-45px);
+  transition: all 250ms ease-in-out;
+}
+
+.svg-container,
+.text-container {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container .text {
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+  transition: opacity ease-in-out 250ms;
+}
+
+.download-icon {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  opacity: 0;
+  transition: opacity ease-in-out 250ms;
+}
+
+/* hover state for the button */
+.download-btn:hover .button-content {
+  transform: translateY(0px);
+}
+
+.download-btn:hover .text {
+  opacity: 0;
+}
+
+.download-btn:hover .download-icon {
+  opacity: 1;
+}
+
+.download-btn:focus .download-icon {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* hover state for the button */
+
+
+
+.logo-color {
+  color: #70c2f5;
+}
+
+.logo-txt-color {
+  color: #1c3f7e;
+}
+
+.mt-6{
+  margin-top: 3.5rem;
+}
+
+.line2 {
+  height: 3px;
+  width: 50px;
+  min-width: 50px;
+  background-color: #70c2f5;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.elementor-16688 .elementor-element.elementor-element-9c3d445 .qodef-subtitle-icon--left .qodef-m-subtitle .qodef-m-icon-holder {
+  margin-right: 10px;
+}
+
+
+.line3 {
+  height: 30px;
+  width: 10px;
+  border-radius: 100%;
+  min-width: 30px;
+  background-color: #70c2f5;
+  /* margin-top: 7px; */
+  margin-right: 10px;
+}
+
+.block {
+  position: relative;
+  /* Для контекста позиционирования */
+  cursor: pointer;
+}
+
+.line {
+  height: 4px;
+  border-radius: 50px;
+  background-color: #c2c2c2;
+  /* Цвет по умолчанию */
+  transition: background-color 0.3s ease;
+  /* Плавный переход цвета */
+}
+
+/* Общий стиль вкладок */
+.nav-tabs .nav-link {
+  position: relative;
+  font-size: 1rem;
+  color: rgb(141, 140, 140);
+  border: none;
+  background-color: unset;
+  transition: color 0.3s ease;
+  padding-bottom: 8px;
+  text-transform: none;
+  text-align: right;
+}
+
+.nav-link {
+  padding: 0;
+  margin: 0rem 30px;
+}
+
+/* Подчёркивание снизу */
+.nav-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 50%;
+  /* длина линии */
+  background-color: #1c3f7e
+
+;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: unset;
+}
+
+/* Наведение — появляется линия */
+.nav-tabs .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Активная вкладка — линия видна */
+.nav-tabs .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Активный таб — чёрный текст */
+.nav-tabs .nav-link.active {
+  color: black;
+  background-color: unset;
+
+}
+
+
+
+/* При наведении на блок меняем цвет линии */
+.block:hover .line {
+  background-color: #ff6600;
+}
+
+.tick {
+  background-color: #ff6600;
+  border-radius: 100%;
+  padding: 5px 6px;
+  color: white;
+}
+
+.form {
+  border: none;
+  outline: none;
+  background-color: #eae9e9;
+  min-height: auto;
+  padding-top: .82rem;
+  padding-bottom: .82rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: black;
+}
+
+
+/* HEADER */
+.parallax-header {
+  height: 1300px;
+}
+
+
+@media (max-width: 768px) {
+  .parallax-header {
+    height: 900px;
+    /* Уменьшаем высоту */
+  }
+
+  .parallax-header .display-3 {
+    font-size: 2rem;
+    /* Уменьшаем размер шрифта */
+  }
+
+  .positionary {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
+
+.s-prod-list__item {
+  border: 1px solid #fff;
+  box-shadow: 4px 15px 24px -8px rgba(73, 75, 89, .04);
+  background: #f4f4f4;
+  border-radius: 24px;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+  .positionary {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .counters-container {
+    margin-top: 0;
+  }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+  .positionary {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* SLIDER HEADER */
+.btn-design {
+  height: 1rem;
+  width: 1rem;
+  box-shadow: none;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 1024px;
+}
+
+.background-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.slider-btn {
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.3s ease-in-out;
+}
+
+.slider-btn.active {
+  background: white;
+}
+
+.diamond-container {
+  width: 100px;
+  height: 100px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  transform: rotate(45deg);
+  border: 2px dashed black;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+
+
+  .h-100 {
+    height: unset;
+  }
+
+
+
+
+
+
+  .rounded-9 {
+    border-width: 2px;
+    /* Уменьшаем толщину рамки */
+  }
+
+
+
+
+
+
+  .img-fluid {
+    width: 100%;
+    /* Уменьшаем ширину изображения */
+    max-width: 300px;
+    /* Ограничиваем максимальный размер */
+    margin-top: rem;
+    /* Добавляем отступы */
+  }
+
+  .projectBlock {
+    margin: 0 auto;
+  }
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+/* Изображение */
+.image {
+  width: 100%;
+  border-radius: 15px;
+  border: 5px solid #fff;
+}
+
+@media (max-width: 320px) {
+  .image-container {
+    display: none;
+  }
+
+  .parallax-header {
+    height: 500px;
+  }
+
+
+}
+
+
+
+
+
+/* Адаптивность для диапазона 992px - 1600px */
+
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+
+
+
+
+
+  .positionary {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 576px) {
+
+
+
+  .positionary {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+/* Обращаясь к нам вы получите: */
+
+.bg-gray-light-2 {
+    background: #f0f4f6;
+}
+
+@media (min-width: 1024px) {
+    .lg\:py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+@media (min-width: 1024px) {
+    .lg\:px-\[48px\] {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+.rounded-2xl {
+    border-radius: 1rem;
+}
+
+.show{
+  background-color: white;
+  border-radius: 1rem;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right:  0.2rem;
+        padding-left:  0.2rem;
+    }
+}
+
+.img-secondary {
+  top: 400px;        /* вертикальное смещение */
+  left: 270px;       /* горизонтальное смещение */
+  z-index: 2;       /* чтобы быть поверх */
+}

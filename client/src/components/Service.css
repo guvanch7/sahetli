@@ -1,0 +1,27 @@
+ .card-title {
+   font-weight: bold;
+   font-size: 1.5rem;
+ }
+
+ .card {
+   transition: transform 0.3s ease;
+ }
+
+ .card:hover {
+   transform: scale(1.05);
+ }
+
+
+ .card-image {
+   width: 100%;
+   /* Одинаковая ширина для всех изображений */
+   height: 300px;
+   /* Задайте желаемую высоту */
+   object-fit: cover;
+   /* Сохраняет пропорции изображения и заполняет область */
+ }
+
+ .slick-arrow::before {
+   display: none;
+ }
+ 

@@ -1,0 +1,212 @@
+.line {
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ff6600;
+  /* Цвет линии загрузки */
+  transition: width 3s linear;
+  /* Длительность совпадает с интервалом смены картинки */
+}
+
+.line.active::before {
+  width: 100%;
+  /* Полное заполнение линии */
+  animation: clear 0s linear 3s forwards;
+  /* Очищает линию сразу после завершения */
+}
+
+@keyframes clear {
+  to {
+    width: 0;
+  }
+}
+
+.card-bg {
+  padding: 30px;
+
+  background-color: rgb(250 250 250);
+}
+
+
+.card-bg {
+  background-color: #f8f9fa;
+  padding: 50px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-bg h5,
+.card-bg p {
+  margin: 0;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.card-bg.hover-effect:hover {
+  background-color: #ff9f00;
+  color: #fff;
+}
+
+.card-bg.hover-effect:hover h5,
+.card-bg.hover-effect:hover p {
+  color: #fff;
+}
+
+/* Устанавливаем промежутки между колонками и рядами */
+.custom-row-gap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Промежуток между блоками */
+}
+
+.card-bg {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px); /* Ширина блока с учетом промежутка */
+  max-width: calc(33.333% - 20px); /* Устанавливаем максимум */
+  box-sizing: border-box;
+}
+
+.card-bg h5, .card-bg p {
+  margin: 0;
+  color: #000;
+}
+
+.card-bg.hover-effect:hover {
+  background-color: #ff9f00;
+  color: #fff;
+  transform: scale(1.05); /* Эффект увеличения */
+}
+
+
+.transition-image, .transition-text {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.transition-image {
+  opacity: 1;
+}
+
+.transition-text {
+  opacity: 1;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-arrow {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #333;
+  font-size: 30px;
+  transition: transform 0.3s;
+}
+
+.btn-arrow:hover {
+  transform: scale(1.2);
+}
+
+
+/* Lang Dropdown */
+
+.lang-dropdown {
+  position: relative; /* Обязательно! */
+  display: inline-block;
+}
+
+.lang-toggle {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  /* background-color: #f0f0f0; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.lang-toggle:hover {
+  /* background-color: #e0e0e0; */
+}
+
+.lang-menu {
+  position: absolute;
+  top: 105%;
+  right: -10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 0.3s ease forwards;
+
+  /* ВАЖНО: чтобы не пряталось за другими элементами */
+  z-index: 999999999999999999;
+}
+
+
+
+.lang-menu::before   {
+  z-index: 999999999999999999;
+}
+.lang-dropdown.open .lang-menu {
+  display: flex;
+}
+
+.lang-option {
+  width: 66px;
+  height: 36px;
+  border: none;
+  margin: 5px 0 ;
+  border-radius: 50%;
+  background:none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.lang-option:hover {
+  /* background-color: #e2e2e2; */
+  transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .lang-menu--mobile {
+    right: unset !important;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

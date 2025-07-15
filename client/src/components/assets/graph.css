@@ -1,0 +1,127 @@
+.chart-container {
+    
+    position: relative;
+    z-index: 0;
+    margin: 50px auto;
+    width: 90%; /* Используем проценты для ширины */
+    max-width: 800px; /* Ограничиваем максимальную ширину */
+    height: auto;
+    aspect-ratio: 16/10; /* Соотношение сторон */
+    background-color: rgba(255, 255, 255, 0.055);
+  }
+  
+  .chart-container:after {
+    content: "";
+    position: absolute;
+    top: -2%;
+    left: -1%;
+    height: 2%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.055);
+    transform: skew(45deg);
+  }
+  
+  .chart-container table tr td {
+    width: 12.5%; /* Равное распределение по ширине */
+    height: auto;
+    border: solid 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .meter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5%; /* Уменьшена ширина для адаптации */
+    background-color: rgba(20, 113, 163, 0.5);
+    border-left: solid 1px rgba(255, 255, 255, 0.5);
+  }
+  
+  .meter li {
+    height: 20%; /* Относительная высота для каждой метки */
+    font-size: 0.9rem; /* Уменьшенный шрифт для мобильных устройств */
+  }
+  
+  .bar {
+    position: absolute;
+    bottom: 0;
+    width: 6%; /* Процент от ширины контейнера */
+    margin: 0 2%; /* Отступы между столбиками */
+    background-color: rgba(107, 255, 49, 0.35);
+  }
+  
+  .bar:before,
+  .bar:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(107, 255, 49, 0.25);
+  }
+  
+  .bar:before {
+    left: -5%;
+    bottom: 7%;
+    height: 100%;
+    width: 5%;
+    transform: skewY(45deg);
+  }
+  
+  .bar:after {
+    top: -2%;
+    left: -2%;
+    width: 100%;
+    height: 2%;
+    transform: skewX(45deg);
+  }
+  
+  /* Размеры и расположение столбиков */
+  .two {
+    left: 12.5%;
+    height: 57%;
+  }
+  
+  .three {
+    left: 25%;
+    height: 85%;
+  }
+  
+  .four {
+    left: 37.5%;
+    height: 35%;
+  }
+  
+  .five {
+    left: 50%;
+    height: 63%;
+  }
+  
+  .six {
+    left: 62.5%;
+    height: 45%;
+  }
+  
+  .seven {
+    left: 75%;
+    height: 15%;
+  }
+  
+  .eight {
+    left: 87.5%;
+    height: 32%;
+  }
+  
+  /* Медиазапросы для мобильных устройств */
+  @media (max-width: 768px) {
+    .meter {
+      width: 10%;
+    }
+  
+    .bar {
+      width: 8%;
+      margin: 0 1.5%;
+    }
+  
+    .meter li {
+      font-size: 0.7rem;
+    }
+  }
+  
