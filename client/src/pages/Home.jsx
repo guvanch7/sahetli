@@ -54,6 +54,13 @@ import quality from '../assets/icons/award.png'
 import support from '../assets/icons/support.png'
 import productivity from '../assets/icons/productivity.png'
 
+import hvacIcon from '../assets/icons/hvac-icon.png'
+import checked from '../assets/icons/checked.png'
+import employee from '../assets/icons/employee.png'
+import contract from '../assets/icons/contract.png'
+import responsibility from '../assets/icons/responsibility.png'
+import approach from '../assets/icons/approach.png'
+
 import home from '../assets/icons/house.png'
 import factory from '../assets/icons/warehouse.png'
 import office from '../assets/icons/office-center.png'
@@ -184,16 +191,16 @@ function Home() {
                         <MDBRow>
                             <MDBCol className='mt-7' data-aos='fade-up' data-aos-delay="300" data-aos-duration="800" lg={6}>
                                 <img src={hvac} className='img-fluid rounded-9' alt="" />
-                                <div className='rounded-9 text-white px-4 py-3  mt-4' style={{ backgroundColor: "#1c3f7e" }}>
-                                    <h2 className='fw-bolder text-center display-5'>+{cleaningCounter1}</h2>
-                                    <h5 className='text-center'>Довольных <br /> клиентов</h5>
+                                <div className='rounded-9 text-white px-4 py-3 text-center mt-4' style={{ backgroundColor: "#1c3f7e" }}>
+                                    <img src={hvacIcon} className='img-fluid ' alt="" />
+                                    <h5  >Профессиональное оборудование</h5>
                                 </div>
                             </MDBCol>
 
                             <MDBCol className='' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="500" lg={6}>
-                                <div className='rounded-9 text-white px-4 py-3  mb-4' style={{ backgroundColor: "#70c2f5" }}>
-                                    <h2 className='fw-bolder text-center display-5'>+{cleaningCounter2}</h2>
-                                    <h5 className='text-center'>Современных  оборудований</h5>
+                                <div className='rounded-9 text-white text-center px-4 py-3  mb-4' style={{ backgroundColor: "#70c2f5" }}>
+                                    <img src={checked} className='img-fluid' alt="" />
+                                    <h5>Проверенное качество</h5>
                                 </div>
                                 <img src={hvac2} className='img-fluid rounded-9' alt="" />
                             </MDBCol>
@@ -304,12 +311,8 @@ function Home() {
 
 
             <MDBContainer
-                className="counters-container mt-4"
-                style={{
-                    position: 'relative',
-                    marginTop: '-50px',
-                    zIndex: 2,
-                }}
+                className=" mt-4"
+               
             >
                 <MDBRow className="justify-content-lg-  mt-5 text-black">
                     <div className='d-flex mt-5 '>
@@ -418,22 +421,22 @@ function Home() {
 
 
                         <MDBRow className='justify-content-center  '>
-                            <MDBCol className="bg-light mx-3 p-3 my-1  shadow-5 rounded-8" data-aos="flip-up" data-aos-duration="620" data-aos-delay="300" lg={4}>
-                                <p>на рынке</p>
-                                <h2 className='fw-bolder logo-txt-color display-6'>+{productiveWork} лет</h2>
+                            <MDBCol className="bg-light mx-3 p-3 my-1 text-center shadow-5 rounded-8" data-aos="flip-up" data-aos-duration="620" data-aos-delay="300" lg={4}>
+                                <img src={employee} alt="" />
+                                <p className='mt-3'>Опытные специлисты</p>
                             </MDBCol>
-                            <MDBCol className="bg-light  mx-3 p-3 my-1   rounded shadow-5" data-aos="flip-up" data-aos-duration="620" data-aos-delay="400" lg={4}>
-                                <p>  специалистов</p>
-                                <h3 className='fw-bolder logo-txt-color display-6'>{employees}+</h3>
+                            <MDBCol className="bg-light  mx-3 p-3 my-1  text-center rounded shadow-5" data-aos="flip-up" data-aos-duration="620" data-aos-delay="400" lg={4}>
+                                <img src={contract} className='img-fluid' alt="" />
+                                <p className='mt-3'>  Прозрачные условия</p>
                             </MDBCol>
-                            <MDBCol className="bg-light  mx-3 p-3 my-4  shadow-5 rounded" data-aos="flip-up" data-aos-duration="620" data-aos-delay="500" lg={4}>
-                                <p>довольных клиентов</p>
-                                <h3 className='fw-bolder  logo-txt-color display-6'>{customers}+</h3>
+                            <MDBCol className="bg-light  mx-3 p-3 my-4 text-center shadow-5 rounded" data-aos="flip-up" data-aos-duration="620" data-aos-delay="500" lg={4}>
+                                <img src={responsibility} alt="" />
+                                <p className='mt-3'>Надёжность и ответственность</p>
                             </MDBCol>
 
-                            <MDBCol className="bg-light  mx-3 p-3 my-4   shadow-5 rounded" data-aos="flip-up" data-aos-duration="620" data-aos-delay="600" lg={4}>
-                                <p>успешных работ</p>
-                                <h3 className='fw-bolder  logo-txt-color display-6'>{customers}+</h3>
+                            <MDBCol className="bg-light  mx-3 p-3 my-4 text-center  shadow-5 rounded" data-aos="flip-up" data-aos-duration="620" data-aos-delay="600" lg={4}>
+                                <img src={approach} alt="" />
+                                <p className='mt-3'>Индивидуальный подход</p>
                             </MDBCol>
                         </MDBRow>
 

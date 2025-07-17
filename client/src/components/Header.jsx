@@ -56,7 +56,7 @@ function Header() {
                             key={slides[activeIndex].image}
                             src={slides[activeIndex].image}
 
-                            className="background-image"
+                            className="background-image img-fluid"
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 1.1 }}
@@ -93,22 +93,18 @@ function Header() {
 
 
                             <MDBCol
-                                className="position-absolute top-50  translate-middle-y d-flex flex-column gap-4"
-                                style={{
-                                    right: "20px", left: "95%"
-                                }}
-                            >
-                                {slides.map((_, index) => (
-                                    <MDBBtn
-                                        key={index}
+  className={`slider-controls d-flex flex-column gap-4`}
+>
+  {slides.map((_, index) => (
+    <MDBBtn
+      key={index}
+      floating
+      className={`btn-design slider-btn ${activeIndex === index ? "active" : ""}`}
+      onClick={() => handleSlideChange(index)}
+    />
+  ))}
+</MDBCol>
 
-                                        floating
-
-                                        className={`btn-design slider-btn ${activeIndex === index ? "active" : ""}`}
-                                        onClick={() => handleSlideChange(index)}
-                                    />
-                                ))}
-                            </MDBCol>
                         </MDBRow>
                     </MDBContainer>
                 </div>

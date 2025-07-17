@@ -155,3 +155,11 @@
 .navbar.contacts-navbar {
   background-color: white !important;
 }
+
+@media (min-width: 1200px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important
+;
+        flex-basis: auto;
+    }
+}

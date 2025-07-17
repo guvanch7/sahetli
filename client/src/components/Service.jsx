@@ -204,7 +204,7 @@ const Service = () => {
 
                     </MDBTabs>
 
-                    <MDBTabsContent data-aos='fade-left'>
+                    <MDBTabsContent  >
                         <MDBTabsPane open={basicActive === 'tab1'}>
 
 

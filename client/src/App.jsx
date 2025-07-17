@@ -28,8 +28,8 @@ import {
   MDBFooter,
 
 } from 'mdb-react-ui-kit';
-import './App.css';
 import './components/navbar.css';
+import './App.css';
 import logo from './assets/logo.png'
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useTranslation } from 'react-i18next';
@@ -45,9 +45,7 @@ import enIcon from './assets/icons/EN.png'
 import Header from './components/Header';
 import Button from './components/Button';
 import Home from './pages/Home';
-// import Laboratory from './pages/Laboratory';
 import About from './pages/About';
-// import Certifications from './pages/Certifications';
 import Construction from './pages/Construction';
 import Contacts from './pages/Contacts';
 import LangDrop from './components/LangDrop';
@@ -115,7 +113,7 @@ function App() {
 
 
           <MDBNavbar
-            expand="lg"
+            expand="xl"
             light
             className={`container navbar ${scrolled ? 'scrolled' : ''} ${openBasic ? 'menu-open' : ''} ${hovered ? "menu-open" : ""} ${location.pathname === '/contacts' ? 'contacts-navbar' : ''}`}
             fixed="top"
