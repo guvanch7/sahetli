@@ -123,9 +123,9 @@ function App() {
       ) : (
 
         <div>
-          <ScrollToTop />
 
           <Router>
+          <ScrollToTop />
 
             <MDBNavbar
               expand="xl"
