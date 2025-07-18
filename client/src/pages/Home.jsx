@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, } from 'react'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import {
     MDBNavbar,
@@ -25,8 +25,7 @@ import {
 } from 'mdb-react-ui-kit';
 import '../style.css';
 import '../components/assets/graph.css'
-import constr1 from '../pages/assets/constr/constr1.jpg'
-// import { Parallax, ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+ 
 import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -36,13 +35,9 @@ import Vehicle from '../components/Vehicle';
 import Header from '../components/Header';
 import Service from '../components/Service';
 import Electric from '../components/Electric';
-// import CarouselCert from '../components/CarouselCert';
 import Form from '../components/Form';
 import Graph from '../components/Graph';
-// import work1 from '../assets/image/work1.png'
-// import work2 from '../assets/image/work2.jpg'
 import contacts from '../assets/image/contacts.png'
-// import work4 from '../assets/image/work3.jpg'
 import oilgas from '../assets/image/oilgas.jpg'
 import oilgas2 from '../assets/image/oilgas2.jpg'
 import hvac from '../assets/image/hvac.jpg'
