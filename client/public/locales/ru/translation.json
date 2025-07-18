@@ -3,9 +3,14 @@
     "navLink2": "Услуги",
     "navLink3": "О нас",
     "navLink4": "Контакты",
-    "navLink5": "Продукты",
-    "pdfbtn": "Скачать PDF каталог",
-    "sloganTxt": "Производство, Услуги, Качество – От нас!",
+    "footerLink1": "Нефтяные решения",
+    "footerLink2": "Вентиляционные решения",
+    "footerLink3": "Спецтехника и автотранспорт",
+    "footerLink4": "Электроэнергетика",
+    
+    "footerMain1":"Основные",
+    "footerMain2":"Дополнительно",
+    "footerMain3":"Для связи",
     "businessAreas": "Наша деятельность",
     "services": "Наши услуги",
     "oilgas": "Закупки и поставки для нефтяной отрасли",
@@ -37,10 +42,9 @@
     "contactPageFormTxt2": "Или нужна консультация?",
     "contactPageFormTxt3": "Заполните форму или позвоните нам.",
     "socialTxt": "Следите за нами!",
-    "inputTxt":"Заполните форму",
-    "placeholderName":"Имя",
+    "inputTxt": "Заполните форму",
+    "placeholderName": "Имя",
     "placeholderPhone": "Номер телефона",
-    "placeholderMessage":"Сообщение",
+    "placeholderMessage": "Сообщение",
     "buttonSend": "Отправить"
-
 }

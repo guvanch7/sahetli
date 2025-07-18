@@ -66,7 +66,7 @@ function Header() {
                 </div>
 
                 {/* Затемненная маска */}
-                <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}>
+                <div className="mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
                     <MDBContainer className="h-100 ">
                         <MDBRow className="align-items-center justify-content-lg-end h-100">
 
@@ -93,17 +93,17 @@ function Header() {
 
 
                             <MDBCol
-  className={`slider-controls d-flex flex-column gap-4`}
->
-  {slides.map((_, index) => (
-    <MDBBtn
-      key={index}
-      floating
-      className={`btn-design slider-btn ${activeIndex === index ? "active" : ""}`}
-      onClick={() => handleSlideChange(index)}
-    />
-  ))}
-</MDBCol>
+                                className={`slider-controls d-flex flex-column gap-4`}
+                            >
+                                {slides.map((_, index) => (
+                                    <MDBBtn
+                                        key={index}
+                                        floating
+                                        className={`btn-design slider-btn ${activeIndex === index ? "active" : ""}`}
+                                        onClick={() => handleSlideChange(index)}
+                                    />
+                                ))}
+                            </MDBCol>
 
                         </MDBRow>
                     </MDBContainer>

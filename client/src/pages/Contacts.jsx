@@ -152,7 +152,7 @@ function Contact() {
                         <p>{t("contactPageFormTxt3")}</p>
 
 
-                        <h5 className='text-black'>{t("socialTxt")}</h5>
+                        {/* <h5 className='text-black'>{t("socialTxt")}</h5>
                         <div className="d-flex  gap-3">
                             <MDBBtn size='lg' className='m-1' floating style={{ backgroundColor: '#0082ca' }} href='#'>
                                 <MDBIcon size='xl' fab icon='linkedin-in' />
@@ -169,7 +169,7 @@ function Contact() {
                             <MDBBtn size='lg' className='m-1' floating style={{ backgroundColor: '#25d366' }} href='#'>
                                 <MDBIcon size='xl' fab icon='whatsapp' />
                             </MDBBtn>
-                        </div>
+                        </div> */}
                     </MDBCol>
 
                     <MDBCol className='bg-white rounded-5 p-5 mb-5 shadow-5' lg={6}>

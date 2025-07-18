@@ -41,7 +41,7 @@ const ElectricScrollSection = () => {
   };
 
   return (
-    <div className="d-none d-md-block"
+    <div className="d-none d-md-block" id="electricService"
       ref={ref}
       style={{
         position: "relative",
@@ -74,16 +74,9 @@ const ElectricScrollSection = () => {
           <MDBCol md="6" style={{ maxWidth: "45%" }}>
             <h2 className="fw-bold logo-txt-color mb-3">⚡ Электроэнергетика</h2>
             <p className="  fs-6">
-              Мы предлагаем надёжные и энергоэффективные решения для промышленных объектов: проектирование, подбор оборудования, монтаж и сопровождение систем электроснабжения.
+              Также наша компания предлагает транспортные услуги любой сложности – от индивидуальных до масштабных групповых перевозок.
             </p>
-            <MDBBtn
-              
-              className="fw-bold px-4 py-2"
-              color="primary"
-              style={{ borderRadius: "30px", backgroundColor: "#1c3f7e"  }}
-            >
-              Подробнее
-            </MDBBtn>
+
           </MDBCol>
 
           <MDBCol

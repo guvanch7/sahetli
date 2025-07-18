@@ -118,13 +118,15 @@ function Home() {
 
     return (
         <>
+        
+
             <Header />
 
 
             <Service />
 
 
-            <MDBContainer className="bg-image"
+            <MDBContainer className="bg-image" id="oilSolutions"
                 style={{
                     height: '800px',
                     backgroundPosition: 'center',
@@ -141,10 +143,9 @@ function Home() {
                         </div>
 
                         <MDBCol lg={6}>
-                            <h2 className='text-black fw-bolder'>Поставка оборудования для <span className='logo-txt-color'> нефтяной отрасли</span></h2>
+                            <h2 className='text-black fw-bolder'>Поставка оборудования для <span className='logo-txt-color'> нефтяной отрасли:</span></h2>
 
-                            <p>Также мы редлагаем надёжные решения по поставке специализированного оборудования и материалов
-                                для нефтяной отрасли.</p>
+                            <p>Мы являемся надежным поставщиком высококачественного оборудования для нефтяной промышленности, отвечающего самым строгим международным стандартам.</p>
 
                             <img src={oilgas} className='img-fluid rounded-9' alt="" />
                         </MDBCol>
@@ -197,7 +198,7 @@ function Home() {
                                 </div>
                             </MDBCol>
 
-                            <MDBCol className='' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="500" lg={6}>
+                            <MDBCol className='mt-3' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="500" lg={6}>
                                 <div className='rounded-9 text-white text-center px-4 py-3  mb-4' style={{ backgroundColor: "#70c2f5" }}>
                                     <img src={checked} className='img-fluid' alt="" />
                                     <h5>Проверенное качество</h5>
@@ -227,7 +228,7 @@ function Home() {
 
                         </MDBTabs>
 
-                        <MDBTabsContent>
+                        <MDBTabsContent id='hvacService'>
                             <MDBTabsPane open={basicActive === 'tab1'} >
 
 
@@ -238,15 +239,15 @@ function Home() {
                                 </div>
 
                                 <p  >
-                                    Чистка воздуховодов позволяет  выполнить санитарные нормы, от  соблюдения которых зависит самочувствие и здоровье каждого человека.
-                                    Это важно как в жилых помещениях, так и на рабочем месте, где люди проводят много времени
+                                    Чистка воздуховодов позволяет выполнить санитарные нормы, от соблюдения которых зависит самочувствие и здоровье каждого человека. Это важно как в жилых помещениях, так и на рабочих местах, где люди проводят много времени.
+
 
                                     <br />
                                     <br />
 
-                                    Мы полностью снабжены современным оборудованием и имеем штат квалифицированных специалистов, чтобы эффективно и качественно проводить процесс очистки и дезинфекции
+                                   Мы полностью оснащены современным оборудованием и имеем штат квалифицированных специалистов для эффективного и качественного проведения процесса очистки и дезинфекции
 
-                                    <div className="row justify-content-between">
+                                    <div className="row justify-content-between mt-2">
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="1000" data-aos-delay="300">
                                             <img className='img-fluid' style={{ width: "5rem" }} src={home} alt="" />
@@ -280,9 +281,7 @@ function Home() {
                                     </div>
                                 </p>
 
-                                <MDBBtn style={{ backgroundColor: "#1c3f7e" }}>
-                                    Подробнее
-                                </MDBBtn>
+
                             </MDBTabsPane>
 
                             <MDBTabsPane open={basicActive === 'tab2'}>
@@ -299,9 +298,9 @@ function Home() {
                                     Заказать видеоинспекцию объекта можно в нашей компании. Опытный специалист с соответствующей квалификацией и подготовкой быстро выявит дефект сети, оценит степень деградации материала, выявит причину засора. Закажите чистку вентиляции  у нашей компании, мы комплексно устраним проблемы воздуховодов.
                                 </p>
 
-                                <MDBBtn style={{ backgroundColor: "#1c3f7e" }}>
+                                {/* <MDBBtn style={{ backgroundColor: "#1c3f7e" }}>
                                     Подробнее
-                                </MDBBtn>
+                                </MDBBtn> */}
                             </MDBTabsPane>
 
                         </MDBTabsContent>
@@ -312,7 +311,7 @@ function Home() {
 
             <MDBContainer
                 className=" mt-4"
-               
+
             >
                 <MDBRow className="justify-content-lg-  mt-5 text-black">
                     <div className='d-flex mt-5 '>
@@ -351,7 +350,7 @@ function Home() {
                                     Высокое качество и надёжность
                                 </h5>
                                 <p class=" ">
-                                    Работаем с проверенными технологиями и поставщиками, обеспечивая стабильный результат и длительный срок службы.
+                                    Работаем с проверенными технологиями и поставщиками, обеспечивая стабильный результат.
                                 </p>
                             </div>
                         </div>

@@ -3,9 +3,15 @@
     "navLink2": "Service",
     "navLink3": "About",
     "navLink4": "Contacts",
-    "navLink5": "Products",
-    "pdfbtn": "Download PDF Catalog",
-    "sloganTxt": "Production, Service, Quality – From us!",
+    "footerLink1": "Oil solutions",
+    "footerLink2": "HVAC services",
+    "footerLink3": "Special equipment and vehicles",
+    "footerLink4": "Electric power",
+
+    "footerMain1":"Main",
+    "footerMain2":"Additional",
+    "footerMain3":"Get in touch",
+    
     "businessAreas": "Our Areas of Expertise",
     "services": "Our Services",
     "oilgas": "Oil & Gas services",
@@ -26,7 +32,7 @@
     "ourCompany": "Our company",
     "contactPageTitle": "Get in Touch",
     "contactMapTxt": "Our Location on the Map",
-    "address": "Turkmenistan, c. Ashgabat, Nobat Bagshy street (Ленинградская), 2",
+    "address": "Turkmenistan, c. Ashgabat, Nobat Bagshy street (Leningradskaya), 2",
     "contactPageTxt": "You can contact us with any questions — we will respond promptly and provide the necessary assistance.",
     "contactPageFormTxt1": "Still have a question?",
     "contactPageFormTxt2": "Or need a consultation?",
@@ -35,7 +41,6 @@
     "inputTxt": "Write to us",
     "placeholderName": "Full name",
     "placeholderPhone": "Phone Number",
-    "placeholderMessage":"Message",
+    "placeholderMessage": "Message",
     "buttonSend": "Send"
-
 }
