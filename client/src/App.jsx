@@ -50,6 +50,7 @@ import About from './pages/About';
 import Construction from './pages/Construction';
 import Contacts from './pages/Contacts';
 import LangDrop from './components/LangDrop';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [openBasic, setOpenBasic] = useState(false);
@@ -120,7 +121,9 @@ function App() {
       {loading ? (
         <Preloader />
       ) : (
+
         <div>
+          <ScrollToTop />
 
           <Router>
 
