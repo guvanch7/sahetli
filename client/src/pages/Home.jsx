@@ -118,7 +118,7 @@ function Home() {
 
     return (
         <>
-        
+
 
             <Header />
 
@@ -128,10 +128,14 @@ function Home() {
 
             <MDBContainer className="bg-image" id="oilSolutions"
                 style={{
-                    height: '800px',
+                    minHeight: '800px', // минимальная, но не жёсткая высота
                     backgroundPosition: 'center',
                     backgroundImage: `url(${oilBg})`,
-                    transition: '1s' // Фиксированное изображение
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    transition: '1s',
+                    paddingTop: '4rem',
+                    paddingBottom: '4rem'
                 }} fluid>
                 <MDBContainer>
                     <MDBRow>
@@ -245,7 +249,7 @@ function Home() {
                                     <br />
                                     <br />
 
-                                   Мы полностью оснащены современным оборудованием и имеем штат квалифицированных специалистов для эффективного и качественного проведения процесса очистки и дезинфекции
+                                    Мы полностью оснащены современным оборудованием и имеем штат квалифицированных специалистов для эффективного и качественного проведения процесса очистки и дезинфекции
 
                                     <div className="row justify-content-between mt-2">
 
