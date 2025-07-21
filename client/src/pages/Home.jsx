@@ -161,15 +161,15 @@ function Home() {
                     <MDBRow>
                         <div className='d-flex mt-5 '>
                             <div className='line3'></div>
-                            <h4 className='logo-txt-color fw-bolder '>Нефтяные решения</h4>
+                            <h4 className='logo-txt-color fw-bolder '>{t("footerLink1")}</h4>
 
 
                         </div>
 
                         <MDBCol data-aos='fade-right' data-aos-delay="300" data-aos-duration="800" lg={6}>
-                            <h2 className='text-black fw-bolder'>Поставка оборудования для <span className='logo-txt-color'> нефтяной отрасли:</span></h2>
+                            <h2 className='text-black fw-bolder'>{t("headerShort")}<span className='logo-txt-color'> {t("headerContinue")}</span></h2>
 
-                            <p>Мы являемся надежным поставщиком высококачественного оборудования для нефтяной промышленности, отвечающего самым строгим международным стандартам.</p>
+                            <p>{t("oil_equipment_description")}</p>
 
                             <img src={oilgas} className='img-fluid rounded-9' alt="" />
                         </MDBCol>
