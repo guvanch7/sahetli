@@ -222,11 +222,11 @@ const Service = () => {
                             <ul>
                                 <li>{t("oil_equipment_supply")}</li>
                                 <li>{t("vehicle_services")}</li>
-                                <li>Комплексная поддержка в электроэнергетике</li>
-                                <li>Очистка и обслуживание вентиляционных систем</li>
+                                <li>{t("electric_power_support")}</li>
+                                <li>{t("ventilation_services")}</li>
                             </ul>
 
-                            <p>Мы ценим индивидуальный подход и стремимся к долгосрочному сотрудничеству, чтобы быть надёжным партнёром для каждого клиента.</p>
+                            <p>{t("our_approach")}</p>
 
 
                         </MDBTabsPane>
@@ -234,25 +234,17 @@ const Service = () => {
                         <MDBTabsPane open={basicActive === 'tab2'}>
                             <div className='d-flex mt-5 '>
                                 <div className='line3'></div>
-                                <h4 className='logo-txt-color fw-bolder mb-2'>Наше видение</h4>
+                                <h4 className='logo-txt-color fw-bolder mb-2'>{t("our_vision")}</h4>
                             </div>
-                            <p>Стать ключевым партнером в формировании сильной и современной экономики
-                                Туркменистана, благодаря нашему комплексному подходу и высоким стандартам сервиса.</p>
+                            <p>{t("our_goal")}</p>
 
                         </MDBTabsPane>
                         <MDBTabsPane open={basicActive === 'tab3'}>
                             <div className='d-flex mt-5 '>
                                 <div className='line3'></div>
-                                <h4 className='logo-txt-color fw-bolder mb-2'>Наша цель</h4>
+                                <h4 className='logo-txt-color fw-bolder mb-2'> {t("our_mission")}</h4>
                             </div>
-                            <p>ИП «САХЕТЛИ ХЫЗМАТ» активно способствует развитию страны, предоставляя
-надежные и эффективные услуги в нескольких стратегически важных направлениях:
-обеспечение транспортных и строительных нужд через аренду спецтехники и
-пассажирские перевозки; комплексное снабжение нефтяной отрасли
-специализированным оборудованием; укрепление энергетического сектора посредством
-передовых решений; и поддержание здоровой и безопасной среды через обслуживание
-вентиляционных систем. Мы строим доверие через качество, ответственность и
-стремление к общим успехам.</p>
+                            <p>{t("company_intro")}</p>
 
                            
                         </MDBTabsPane>
