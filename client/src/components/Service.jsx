@@ -73,13 +73,13 @@ const Service = () => {
         {
             image: slider2,
             title: `${t("header2")}`,
-            subtitle: `${t("vehicle")}`,
+            subtitle: `${t("footerLink3")}`,
         },
 
         {
             image: slider3,
             title: `${t("header3")}`,
-            subtitle: `${t("electric")}`,
+            subtitle: `${t("footerLink4")}`,
         },
 
         {
@@ -186,19 +186,19 @@ const Service = () => {
 
                         <MDBTabsItem>
                             <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
-                                О нас
+                                {t("about_us")}
                             </MDBTabsLink>
                         </MDBTabsItem>
 
                         <MDBTabsItem>
                             <MDBTabsLink onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
-                                Наше видение
+                                {t("our_vision")}
                             </MDBTabsLink>
                         </MDBTabsItem>
 
                         <MDBTabsItem>
                             <MDBTabsLink className="text-left" onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
-                                Наша цель
+                                {t("our_mission")}
                             </MDBTabsLink>
                         </MDBTabsItem>
 
@@ -211,17 +211,17 @@ const Service = () => {
 
                             <div className='d-flex mt-5 '>
                                 <div className='line3'></div>
-                                <h4 className='logo-txt-color fw-bolder mb-2' >Наша компания</h4>
+                                <h4 className='logo-txt-color fw-bolder mb-2' >{t("ourCompany")}</h4>
                             </div>
-                            <p>Мы рады приветствовать Вас на сайте нашей компании!</p>
+                            <p>{t("welcome_message")}</p>
 
-                            <p>Мы динамично развивающаяся компания, специализирующаяся на предоставлении широкого спектра услуг для различных отраслей промышленности.</p>
+                            <p>{t("about_description")}</p>
 
-                            <p>Наша деятельность охватывает несколько клюевых направлений, в каждом из которых мы гарантируем профессионализм и качество:</p>
+                            <p>{t("activity_scope")}</p>
 
                             <ul>
-                                <li>Поставка оборудования для нефтяной отрасли</li>
-                                <li>Услуги по предоставлению спецтехники и автотранспорта</li>
+                                <li>{t("oil_equipment_supply")}</li>
+                                <li>{t("vehicle_services")}</li>
                                 <li>Комплексная поддержка в электроэнергетике</li>
                                 <li>Очистка и обслуживание вентиляционных систем</li>
                             </ul>

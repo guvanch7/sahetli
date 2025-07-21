@@ -52,7 +52,7 @@ function LangDrop() {
             <button className="lang-toggle" data-lang={selectedLang} onClick={toggleMenu}>
                 <img
                     loading="lazy"
-                    style={{ height: '40px' }}
+                    style={{ height: '30px' }}
                     src={flags[selectedLang]}
                     alt={selectedLang.toUpperCase()}
                 />

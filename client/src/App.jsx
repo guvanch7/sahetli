@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import {
   MDBRow, MDBCol,
@@ -33,13 +33,20 @@ import './App.css';
 import logo from './assets/logo.png'
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { useTranslation } from 'react-i18next';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,useNavigate 
+} from 'react-router-dom';
+
 
 import tmIcon from './assets/icons/TM.png'
 import ruIcon from './assets/icons/RU.png'
 import enIcon from './assets/icons/EN.png'
 import Preloader from './components/Preloader'; // путь к твоему компоненту
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -85,7 +92,18 @@ function App() {
   const [hovered, setHovered] = useState(false);
 
 
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  const handleScroll = (id) => {
+    if (location.pathname !== '/') {
+      // если мы не на главной — переходим и прокидываем, куда скроллить
+      navigate('/', { state: { scrollTo: id } });
+    } else {
+      // если уже на главной — просто скроллим
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
 
   useEffect(() => {
@@ -124,8 +142,8 @@ function App() {
 
         <div>
 
-          <Router>
-          <ScrollToTop />
+       
+            <ScrollToTop />
 
             <MDBNavbar
               expand="xl"
@@ -176,10 +194,39 @@ function App() {
                           {t("navLink2")}
                         </MDBDropdownToggle>
                         <MDBDropdownMenu>
-                          <MDBDropdownItem link><a href='#oilSolutions'>{t("footerLink1")}</a></MDBDropdownItem>
-                          <MDBDropdownItem link><a href='#vehicleService'>{t("footerLink3")}</a></MDBDropdownItem>
-                          <MDBDropdownItem link><a href='#electricService'>{t("footerLink4")}</a></MDBDropdownItem>
-                          <MDBDropdownItem link><a href='#hvacService'>{t("footerLink2")}</a></MDBDropdownItem>
+                          <MDBDropdownItem    link>   <HashLink
+                            smooth
+                            to="/#oilSolutions"
+                            scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+
+                            className="dropdown-item"
+                          >
+                            {t("footerLink1")}
+                            </HashLink>
+                           </MDBDropdownItem>
+                          <MDBDropdownItem link>
+                            <HashLink
+                              smooth
+                              to="/#vehicleService"
+                              className="dropdown-item"
+                              scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+
+                            >{t("footerLink3")}</HashLink>
+                          </MDBDropdownItem>
+                          <MDBDropdownItem link> <HashLink
+                            smooth
+                            to="/#electricService"
+                            scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+
+                            className="dropdown-item"
+                          >{t("footerLink4")}</HashLink></MDBDropdownItem>
+                          <MDBDropdownItem link><HashLink
+                            smooth
+                            to="/#hvacService"
+                            scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+
+                            className="dropdown-item"
+                          >{t("footerLink2")}</HashLink></MDBDropdownItem>
                         </MDBDropdownMenu>
                       </MDBDropdown>
                     </MDBNavbarItem>
@@ -226,7 +273,7 @@ function App() {
               {/* <Route path='/contacts' Component={Contacts}></Route> */}
             </Routes>
 
-
+            
 
             <MDBFooter bgColor='light' className=' text-center text-lg-start text-muted'>
 
@@ -292,7 +339,7 @@ function App() {
                       <h6 className='text-uppercase fw-bold mb-4'>{t("footerMain3")}</h6>
                       <p>
                         <MDBIcon color='secondary' icon='home' className='me-2' />
-                       {t("address")}
+                        {t("address")}
                       </p>
                       <p>
                         <MDBIcon color='secondary' icon='envelope' className='me-3' />
@@ -320,7 +367,7 @@ function App() {
               </div>
             </MDBFooter>
 
-          </Router>
+         
         </div>
       )
       }

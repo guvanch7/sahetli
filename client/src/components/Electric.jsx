@@ -1,127 +1,100 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { MDBContainer, MDBCol, MDBBtn } from "mdb-react-ui-kit";
+import React from "react";
+import { MDBContainer, MDBCol } from "mdb-react-ui-kit";
+import { motion } from "framer-motion";
 import electric1 from "../assets/image/electric.jpg";
 import electric2 from "../assets/image/electric2.jpg";
 import electric3 from "../assets/image/electric3.jpg";
 
-const images = [electric1, electric2, electric3];
-
-const ElectricScrollSection = () => {
-  const ref = useRef(null);
-
-  const steps = images.length;
-  const scrollHeight = (steps + 2) * 100;
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Делим прогресс на равные шаги
-  const stepSize = 1 / steps;
-  const steppedIndex = useTransform(scrollYProgress, (v) =>
-    Math.floor(v / stepSize)
-  );
-
-  // Плавная анимация перехода (по желанию можно убрать)
-  const imageIndex = useSpring(steppedIndex, {
-    stiffness: 120,
-    damping: 20,
-  });
-
-  const getImageStyles = (i) => {
-    const opacity = useTransform(imageIndex, (idx) => (Math.round(idx) === i ? 1 : 0));
-    const scale = useTransform(imageIndex, (idx) => (Math.round(idx) === i ? 1 : 0.9));
-    const x = useTransform(imageIndex, (idx) => (Math.round(idx) === i ? 0 : 100 * (i - idx)));
-    const zIndex = useTransform(imageIndex, (idx) => (Math.round(idx) === i ? 10 : 0));
-    const filter = useTransform(imageIndex, (idx) => (Math.round(idx) === i ? "blur(0px)" : "blur(8px)"));
-
-    return { opacity, x, scale, filter, zIndex };
-  };
-
+const ElectricSection = () => {
   return (
-    <div className="d-none d-md-block" id="electricService"
-      ref={ref}
-      style={{
-        position: "relative",
-        height: `${scrollHeight}vh`,
-        backgroundColor: "#f8f9fa",
-      }}
+    <motion.div
+      id="electricService"
+      className="py-5"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      style={{ backgroundColor: "#f8f9fa" }}
     >
-      <div
+      <MDBContainer
         style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
           display: "flex",
+          flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
-          padding: "0 3rem",
-          zIndex: 10,
+          justifyContent: "space-between",
+          gap: "3rem",
+          flexWrap: "wrap",
         }}
       >
-        <MDBContainer
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "3rem",
-            width: "100%",
-            maxWidth: "1200px",
-          }}
-        >
-          <MDBCol md="6" style={{ maxWidth: "45%" }}>
-            <h2 className="fw-bold logo-txt-color mb-3">⚡ Электроэнергетика</h2>
-            <p className="  fs-6">
-             Предоставляем комплексные решения в сфере электроэнергетики, включая поставку оборудования, монтаж и обслуживание электросетей и систем.
-            </p>
+        {/* Текст */}
+        <MDBCol md="6">
+          <h2 className="fw-bold logo-txt-color mb-3">⚡ Электроэнергетика</h2>
+          <p className="fs-6">
+            Предоставляем комплексные решения в сфере электроэнергетики, включая
+            поставку оборудования, монтаж и обслуживание электросетей и систем.
+          </p>
+        </MDBCol>
 
-          </MDBCol>
-
-          <MDBCol
-            md="6"
-            style={{
-              position: "relative",
-              maxWidth: "45%",
-              height: "400px",
-              overflow: "hidden",
-              flexShrink: 0,
-              borderRadius: "20px",
-            }}
-          >
-            {images.map((img, i) => {
-              const { opacity, x, scale, filter, zIndex } = getImageStyles(i);
-              return (
-                <motion.img
-                  key={i}
-                  src={img}
-                  alt={`Electric ${i}`}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "20px",
-                    opacity,
-                    x,
-                    scale,
-                    filter,
-                    zIndex,
-                    pointerEvents: "none",
-                    transition: "all 0.5s ease-in-out",
-                  }}
-                  draggable={false}
-                />
-              );
-            })}
-          </MDBCol>
-        </MDBContainer>
-      </div>
-    </div>
+        {/* Изображения через CSS Grid */}
+        <MDBCol md="5">
+          <div style={gridContainer}>
+            <motion.div
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              style={imgWrapperStyle}
+            >
+              <img src={electric1} alt="Electric 1" style={imgStyle} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+              style={imgWrapperStyle}
+            >
+              <img src={electric2} alt="Electric 2" style={imgStyle} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              style={{
+                ...imgWrapperStyle,
+                gridColumn: "1 / span 2",
+                justifySelf: "center",
+              }}
+            >
+              <img src={electric3} alt="Electric 3" style={imgStyle} />
+            </motion.div>
+          </div>
+        </MDBCol>
+      </MDBContainer>
+    </motion.div>
   );
 };
 
-export default ElectricScrollSection;
+const gridContainer = {
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr",
+  gridTemplateRows: "auto auto",
+  gap: "1rem",
+  maxWidth: "400px",
+  margin: "0 auto",
+};
+
+const imgWrapperStyle = {
+  width: "100%",
+  height: "150px",
+  borderRadius: "20px",
+  overflow: "hidden",
+  boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+  backgroundColor: "#fff",
+};
+
+const imgStyle = {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "20px",
+};
+
+export default ElectricSection;

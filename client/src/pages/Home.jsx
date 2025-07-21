@@ -25,7 +25,7 @@ import {
 } from 'mdb-react-ui-kit';
 import '../style.css';
 import '../components/assets/graph.css'
- 
+
 import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -69,7 +69,7 @@ import techSupport from '../assets/icons/customer-service.png'
 
 
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom';
 import ElectricScrollSection from '../components/Electric';
 
 function Home() {
@@ -84,6 +84,31 @@ function Home() {
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
     };
+
+
+    const { state, hash } = useLocation();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        // 1) если передали через navigate({state})
+        if (state?.scrollTo) {
+            const id = state.scrollTo;
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // очищаем state, чтобы больше не скроллить при дальнейших mounts
+            navigate(location.pathname, { replace: true, state: {} });
+        }
+        // 2) (дополнительно) если кто-то всё-таки заходит с хешем в URL
+        else if (hash) {
+            const id = hash.replace('#', '');
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // удаляем хеш из адресной строки
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+    }, [state, hash, navigate]);
+
+
     const useCounter = (target, speed) => {
         const [counter, setCounter] = useState(0);
 
@@ -141,7 +166,7 @@ function Home() {
 
                         </div>
 
-                        <MDBCol lg={6}>
+                        <MDBCol data-aos='fade-right' data-aos-delay="300" data-aos-duration="800" lg={6}>
                             <h2 className='text-black fw-bolder'>Поставка оборудования для <span className='logo-txt-color'> нефтяной отрасли:</span></h2>
 
                             <p>Мы являемся надежным поставщиком высококачественного оборудования для нефтяной промышленности, отвечающего самым строгим международным стандартам.</p>
@@ -149,7 +174,7 @@ function Home() {
                             <img src={oilgas} className='img-fluid rounded-9' alt="" />
                         </MDBCol>
 
-                        <MDBCol lg={6}>
+                        <MDBCol  lg={6}>
                             <img src={oilgas2} className='img-fluid rounded-9' alt="" />
                             <h2 className='text-black fw-bolder'>Почему клиенты выбирают <br />  <span className='logo-color' data-aos='fade-right' data-aos-duration="520" data-aos-delay="300"> Sahetli Hyzmat?</span></h2>
 

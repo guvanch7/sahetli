@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
+/* Предотвращаем появление горизонтального скролла из-за анимаций */
+body, html {
+  overflow-x: hidden;
+}
+
+/* На всякий случай ограничим AOS элементы от выхода за контейнер */
+[data-aos] {
+  will-change: transform, opacity;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -620,4 +628,8 @@ textarea::placeholder {
         padding-right: unset;
         padding-left: unset;
     }
+}
+
+.nav-tabs .nav-link {
+  padding: 2rem unset;
 }
