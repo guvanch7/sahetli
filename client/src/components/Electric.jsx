@@ -4,8 +4,15 @@ import { motion } from "framer-motion";
 import electric1 from "../assets/image/electric.jpg";
 import electric2 from "../assets/image/electric2.jpg";
 import electric3 from "../assets/image/electric3.jpg";
+import { useTranslation } from 'react-i18next';
 
 const ElectricSection = () => {
+
+   const { t, i18n } = useTranslation();
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
+
   return (
     <motion.div
       id="electricService"
@@ -27,10 +34,9 @@ const ElectricSection = () => {
       >
         {/* Текст */}
         <MDBCol md="6">
-          <h2 className="fw-bold logo-txt-color mb-3">⚡ Электроэнергетика</h2>
+          <h2 className="fw-bold logo-txt-color mb-3">⚡ {t("footerLink4")}</h2>
           <p className="fs-6">
-            Предоставляем комплексные решения в сфере электроэнергетики, включая
-            поставку оборудования, монтаж и обслуживание электросетей и систем.
+            {t("energy_solutions")}
           </p>
         </MDBCol>
 

@@ -174,25 +174,35 @@ function Home() {
                             <img src={oilgas} className='img-fluid rounded-9' alt="" />
                         </MDBCol>
 
-                        <MDBCol  lg={6}>
+                        <MDBCol lg={6}>
                             <img src={oilgas2} className='img-fluid rounded-9' alt="" />
-                            <h2 className='text-black fw-bolder'>Почему клиенты выбирают <br />  <span className='logo-color' data-aos='fade-right' data-aos-duration="520" data-aos-delay="300"> Sahetli Hyzmat?</span></h2>
+                            <h2 className='text-black fw-bolder'>
+                                {t('why_clients_choose')} <br />
+                                <span
+                                    className='logo-color'
+                                    data-aos='fade-right'
+                                    data-aos-duration='520'
+                                    data-aos-delay='300'
+                                >
+                                    {t('brand_name_question')}
+                                </span>
+                            </h2>
 
                             <div className='row justify-content-center '>
 
                                 <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="300">
                                     <img src={trusted} style={{ width: '4rem' }} alt="" />
-                                    <p className='text-black fw-bold'>Качество и надёжность</p>
+                                    <p className='text-black fw-bold'>{t('quality_and_reliability')}</p>
                                 </div>
 
                                 <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="400">
                                     <img src={logistic} style={{ width: '4rem' }} alt="" />
-                                    <p className='text-black fw-bold'>Оперативная логистика</p>
+                                    <p className='text-black fw-bold'>{t('fast_logistics')}</p>
                                 </div>
 
                                 <div className='col-lg-4 text-center' data-aos='fade-up' data-aos-duration="320" data-aos-delay="500">
                                     <img src={techSupport} style={{ width: '4rem' }} alt="" />
-                                    <p className='text-black fw-bold'>Техническая поддержка</p>
+                                    <p className='text-black fw-bold'>{t('technical_support')}</p>
                                 </div>
                             </div>
 
@@ -210,7 +220,7 @@ function Home() {
                 <MDBRow>
                     <div className='d-flex mt-2 mb-4'>
                         <div className='line3'></div>
-                        <h4 className='logo-txt-color fw-bolder mb-2'>Очистка и обслуживание вентиляционных систем</h4>
+                        <h4 className='logo-txt-color fw-bolder mb-2'> {t("ventilation_services")}</h4>
                     </div>
                     <MDBCol lg={6}>
                         <MDBRow>
@@ -218,14 +228,14 @@ function Home() {
                                 <img src={hvac} className='img-fluid rounded-9' alt="" />
                                 <div className='rounded-9 text-white px-4 py-3 text-center mt-4' style={{ backgroundColor: "#1c3f7e" }}>
                                     <img src={hvacIcon} className='img-fluid ' alt="" />
-                                    <h5  >Профессиональное оборудование</h5>
+                                    <h5  > {t("professional_equipment")}</h5>
                                 </div>
                             </MDBCol>
 
                             <MDBCol className='mt-3' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="500" lg={6}>
                                 <div className='rounded-9 text-white text-center px-4 py-3  mb-4' style={{ backgroundColor: "#70c2f5" }}>
                                     <img src={checked} className='img-fluid' alt="" />
-                                    <h5>Проверенное качество</h5>
+                                    <h5> {t("proven_quality")}</h5>
                                 </div>
                                 <img src={hvac2} className='img-fluid rounded-9' alt="" />
                             </MDBCol>
@@ -236,13 +246,13 @@ function Home() {
 
                             <MDBTabsItem>
                                 <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
-                                    Очистка
+                                    {t("cleaning")}
                                 </MDBTabsLink>
                             </MDBTabsItem>
 
                             <MDBTabsItem>
                                 <MDBTabsLink onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
-                                    Обслуживание
+                                    {t("maintenance")}
                                 </MDBTabsLink>
                             </MDBTabsItem>
 
@@ -259,48 +269,48 @@ function Home() {
 
                                 <div className='d-flex mt-2 '>
                                     <div className='line3'></div>
-                                    <h4 className='logo-txt-color fw-bolder mb-2'>Очистка вентиляционных систем</h4>
+                                    <h4 className='logo-txt-color fw-bolder mb-2'> {t("ventilation_cleaning")}</h4>
                                 </div>
 
                                 <p  >
-                                    Чистка воздуховодов позволяет выполнить санитарные нормы, от соблюдения которых зависит самочувствие и здоровье каждого человека. Это важно как в жилых помещениях, так и на рабочих местах, где люди проводят много времени.
+                                    {t("duct_cleaning_info")}
 
 
                                     <br />
                                     <br />
 
-                                    Мы полностью оснащены современным оборудованием и имеем штат квалифицированных специалистов для эффективного и качественного проведения процесса очистки и дезинфекции
+                                    {t("cleaning_capability")}
 
                                     <div className="row justify-content-between mt-2">
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="1000" data-aos-delay="300">
                                             <img className='img-fluid' style={{ width: "5rem" }} src={home} alt="" />
-                                            <p className='text-black'>Жилые дома</p>
+                                            <p className='text-black'> {t("residential_buildings")}</p>
                                         </div>
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="2000" data-aos-delay="500">
                                             <img className='img-fluid' style={{ width: "5rem" }} src={factory} alt="" />
-                                            <p className='text-black'>Предприятия</p>
+                                            <p className='text-black'> {t("enterprises")}</p>
                                         </div>
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="3000" data-aos-delay="700">
                                             <img className='img-fluid ' style={{ width: "5rem" }} src={office} alt="" />
-                                            <p className='text-black'>Офисные центры</p>
+                                            <p className='text-black'> {t("office_centers")}</p>
                                         </div>
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="4000" data-aos-delay="900">
                                             <img className='img-fluid ' style={{ width: "5rem" }} src={restaurant} alt="" />
-                                            <p className='text-black'>Рестораны</p>
+                                            <p className='text-black'> {t("restaurants")}</p>
                                         </div>
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="5000" data-aos-delay="1100">
                                             <img className='img-fluid ' style={{ width: "5rem" }} src={airport} alt="" />
-                                            <p className='text-black'>Аэропорты</p>
+                                            <p className='text-black'> {t("airports")}</p>
                                         </div>
 
                                         <div className='col-lg-4 col-md-4 col-sm-6' data-aos='fade-up' data-aos-duration="6000" data-aos-delay="1300">
                                             <img className='img-fluid ' style={{ width: "5rem" }} src={railway} alt="" />
-                                            <p className='text-black'>Вокзалы</p>
+                                            <p className='text-black'> {t("stations")}</p>
                                         </div>
                                     </div>
                                 </p>
@@ -311,15 +321,15 @@ function Home() {
                             <MDBTabsPane open={basicActive === 'tab2'}>
                                 <div className='d-flex mt-2 '>
                                     <div className='line3'></div>
-                                    <h4 className='logo-txt-color fw-bolder mb-2'>Обслуживание вентиляционных систем</h4>
+                                    <h4 className='logo-txt-color fw-bolder mb-2'> {t("ventilation_maintenance")}</h4>
                                 </div>
-                                <h5 className='text-black'>Видеодиагностика</h5>
-                                <p>Диагностика воздуховодного канала с помощью специальной аппаратуры позволяет в режиме реального времени оценить состояние внутренних стенок, степень засорения, разновидность отложений. Видеоинспекция вентиляции позволяет эффективно и качественно прочистить систему, улучшить микроклиматические показатели производственных помещений.
-
+                                <h5 className='text-black'> {t("video_diagnostics")}</h5>
+                                <p>
+                                    {t("video_diagnostics")}
                                     <br />
                                     <br />
 
-                                    Заказать видеоинспекцию объекта можно в нашей компании. Опытный специалист с соответствующей квалификацией и подготовкой быстро выявит дефект сети, оценит степень деградации материала, выявит причину засора. Закажите чистку вентиляции  у нашей компании, мы комплексно устраним проблемы воздуховодов.
+                                    {t("video_inspection_order")}
                                 </p>
 
                                 {/* <MDBBtn style={{ backgroundColor: "#1c3f7e" }}>
@@ -340,7 +350,7 @@ function Home() {
                 <MDBRow className="justify-content-lg-  mt-5 text-black">
                     <div className='d-flex mt-5 '>
                         <div className='line3'></div>
-                        <h4 className='logo-txt-color fw-bolder '>Обратившись к нам вы получите:</h4>
+                        <h4 className='logo-txt-color fw-bolder '>{t("what_you_get")}</h4>
                     </div>
 
                     <MDBCol className='mt-3' lg={6}>
@@ -352,10 +362,10 @@ function Home() {
                                     <img loading="lazy" style={{ width: '6rem' }} src={podhod} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
-                                    Комплексный подход
+                                   {t("integrated_approach")}
                                 </h5>
                                 <p class=" ">
-                                    От консультации до внедрения — мы сопровождаем клиента на каждом этапе, предлагая полное решение под задачу.
+                                    {t("full_support")}
                                 </p>
                             </div>
                         </div>
@@ -371,10 +381,10 @@ function Home() {
                                     <img loading="lazy img-fluid" style={{ width: '6rem' }} src={quality} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
-                                    Высокое качество и надёжность
+                                   {t("high_quality_reliability")} 
                                 </h5>
                                 <p class=" ">
-                                    Работаем с проверенными технологиями и поставщиками, обеспечивая стабильный результат.
+                                    {t("trusted_tech_suppliers")} 
                                 </p>
                             </div>
                         </div>
@@ -391,10 +401,10 @@ function Home() {
                                     <img loading="lazy" style={{ width: '6rem' }} src={productivity} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
-                                    Оперативность и гибкость
+                                    {t("efficiency_and_flexibility")} 
                                 </h5>
                                 <p class=" ">
-                                    Быстро реагируем на запросы, адаптируемся под задачи, обеспечиваем своевременные поставки и выполнение.
+                                    {t("responsive_service")} 
                                 </p>
                             </div>
                         </div>
@@ -410,10 +420,10 @@ function Home() {
                                     <img loading="lazy" style={{ width: '6rem' }} src={support} alt="" />
                                 </div>
                                 <h5 class="mb-2 fw-bolder">
-                                    Экспертизу и поддержку
+                                    {t("expertise_and_support")} 
                                 </h5>
                                 <p class=" ">
-                                    Глубокое понимание отрасли позволяет предлагать обоснованные и грамотные технические решения.
+                                    {t("deep_industry_understanding")} 
                                 </p>
                             </div>
                         </div>
