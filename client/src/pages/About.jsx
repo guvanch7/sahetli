@@ -6,6 +6,7 @@ import './pagecss.css';
 import bg from '../assets/image/about-bg.png'
 import about from '../assets/image/about.jpg'
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 
 import Button from '../components/Button';
@@ -13,7 +14,11 @@ import Button from '../components/Button';
 
 function About() {
 
+    const { t, i18n } = useTranslation();
 
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
 
     const yPos = useMotionValue(0);
     const ySpring = useSpring(yPos, { stiffness: 200, damping: 40 }); // для плавности
@@ -45,7 +50,7 @@ function About() {
                     <div className="container mt-7">
                         <div className="pages-txt pt-5 text-white">
                             <h1 className="mt-4" style={{ marginLeft: '10rem' }}>
-                                <span className='fw-bolder display-3'>О НАС</span>
+                                <span className='fw-bolder display-3' style={{ textTransform: "uppercase" }}>{t("aboutUs")}</span>
                             </h1>
                         </div>
                     </div>
@@ -65,7 +70,7 @@ function About() {
                         transition={{ duration: 0.6, ease: 'easeOut' }}
                         viewport={{ once: true }}
                     >
-                        КТО МЫ?
+                        {t("who_we_are")}
                     </motion.h1>
 
                     <motion.h1
@@ -75,7 +80,7 @@ function About() {
                         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        О КОМПАНИИ
+                        {t("about_company")}
                     </motion.h1>
 
                     <motion.h1
@@ -89,20 +94,20 @@ function About() {
                     </motion.h1>
 
                     <MDBCol lg={6}>
-                        <p>Sähetli Hyzmat — это надёжный партнёр в сфере поставок оборудования, аренды спецтехники и инженерных решений для промышленных предприятий. Мы работаем на рынке специализируясь на комплексном обеспечении предприятий нефтяной, энергетической и других отраслей промышленности.</p>
-                        <p> Наша команда объединяет профессионалов, которые глубоко понимают требования и вызовы современного производства. Мы не просто поставляем продукцию — мы решаем задачи клиентов, обеспечивая высокое качество, точность и оперативность на каждом этапе сотрудничества.</p>
+                        <p>{t("company_description")}</p>
+                        <p>{t("team_description")} </p>
 
                         <div className='d-flex mt-4 '>
                             <div className='line3'></div>
-                            <h4 className='logo-txt-color fw-bolder mb-2'>НАШИ НАПРАВЛЕНИЯ</h4>
+                            <h4 className='logo-txt-color fw-bolder mb-2'>{t("our_directions")}</h4>
                         </div>
 
                         <ul>
-                            <p>Мы предоставляем широкий спектр услуг:</p>
-                            <li>Поставка оборудования и материалов — от базовых компонентов до сложных промышленных установок. Сотрудничаем с проверенными производителями и гарантируем качество на каждом этапе поставки.</li>
-                            <li>Аренда специализированной техники — предлагаем современные и надёжные решения для выполнения различных видов работ, включая строительство, транспортировку  и пассажирских перевозок.</li>
-                            <li>Инженерные решения в сфере электроэнергетики — проектирование, поставка оборудований, монтаж и техническое сопровождение электросетей и систем энергоснабжения.</li>
-                            <li>Очистка и обслуживание систем вентиляции — чистка и дезинфекция воздуховодов, прочистка вентиляционных каналов, дымоходов и канализационных труб.</li>
+                            <p>{t("services_intro")}</p>
+                            <li>{t("equipment_supply")}</li>
+                            <li>{t("equipment_rental")}</li>
+                            <li>{t("engineering_solutions")}</li>
+                            <li>{t("ventilation_cleaning2")}</li>
 
                         </ul>
                     </MDBCol>

@@ -102,6 +102,19 @@
   "placeholderPhone": "Phone Number",
   "placeholderMessage": "Message",
   "buttonSend": "Send",
-    "copyright_notice": "© Sahetli Hyzmat. All rights reserved."
+    "copyright_notice": "© Sahetli Hyzmat. All rights reserved.",
+      "who_we_are": "WHO ARE WE?",
+  "about_company": "ABOUT  COMPANY",
+  "company_description": "Sähetli Hyzmat is a reliable partner in the supply of equipment, rental of special machinery, and engineering solutions for industrial enterprises. We operate in the market specializing in comprehensive support of enterprises in the oil, energy, and other industrial sectors.",
+    "team_description": "Our team unites professionals who deeply understand the requirements and challenges of modern manufacturing. We do not just supply products — we solve clients' tasks, ensuring high quality, accuracy, and promptness at every stage of cooperation.",
+      "services_intro": "We provide a wide range of services:",
+  "our_directions": "OUR DIRECTIONS",
+"equipment_supply": "Supply of equipment and materials — from basic components to complex industrial installations. We work with trusted manufacturers and ensure quality at every stage of delivery.",
+  "equipment_rental": "Rental of specialized equipment — we offer modern and reliable solutions for various types of work, including construction, transportation, and passenger services.",
+  "engineering_solutions": "Engineering solutions in the field of electric power — design, equipment supply, installation, and technical support of power grids and energy systems.",
+  "ventilation_cleaning2": "Cleaning and maintenance of ventilation systems — cleaning and disinfection of air ducts, clearing of ventilation shafts, chimneys, and sewer pipes."
+ 
+
+
 
 }
