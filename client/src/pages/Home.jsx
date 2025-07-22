@@ -444,32 +444,32 @@ function Home() {
                     <MDBCol lg={6}>
                         <div className='d-flex mt-2 '>
                             <div className='line3'></div>
-                            <h4 className='logo-txt-color fw-bolder mb-2'>Для связи</h4>
+                            <h4 className='logo-txt-color fw-bolder mb-2'>{t("contactPageTitle")} </h4>
                         </div>
 
-                        <h5 className='text-black'>Мы быстро и ясно разъясняем любые ваши вопросы.</h5>
+                        <h5 className='text-black'>{t("clear_and_quick_explanation")}</h5>
 
-                        <p>Мы готовы предложить вам наилучшие решения. Мы будем тесно работать с вами на каждом этапе и предоставлять необходимые консультации.</p>
+                        <p>{t("best_solutions_offer")}</p>
 
 
 
                         <MDBRow className='justify-content-center  '>
                             <MDBCol className="bg-light mx-3 p-3 my-1 text-center shadow-5 rounded-8" data-aos="flip-up" data-aos-duration="620" data-aos-delay="300" lg={4}>
                                 <img src={employee} alt="" />
-                                <p className='mt-3'>Опытные специлисты</p>
+                                <p className='mt-3'>{t("experienced_specialists")}</p>
                             </MDBCol>
                             <MDBCol className="bg-light  mx-3 p-3 my-1  text-center rounded shadow-5" data-aos="flip-up" data-aos-duration="620" data-aos-delay="400" lg={4}>
                                 <img src={contract} className='img-fluid' alt="" />
-                                <p className='mt-3'>  Прозрачные условия</p>
+                                <p className='mt-3'> {t("transparent_conditions")} </p>
                             </MDBCol>
                             <MDBCol className="bg-light  mx-3 p-3 my-4 text-center shadow-5 rounded" data-aos="flip-up" data-aos-duration="620" data-aos-delay="500" lg={4}>
                                 <img src={responsibility} alt="" />
-                                <p className='mt-3'>Надёжность и ответственность</p>
+                                <p className='mt-3'>{t("reliability_and_responsibility")}</p>
                             </MDBCol>
 
                             <MDBCol className="bg-light  mx-3 p-3 my-4 text-center  shadow-5 rounded" data-aos="flip-up" data-aos-duration="620" data-aos-delay="600" lg={4}>
                                 <img src={approach} alt="" />
-                                <p className='mt-3'>Индивидуальный подход</p>
+                                <p className='mt-3'>{t("individual_approach")}</p>
                             </MDBCol>
                         </MDBRow>
 
@@ -477,10 +477,10 @@ function Home() {
                     </MDBCol>
 
                     <MDBCol className='bg-white rounded-5 p-5 mb-5 shadow-5' lg={6}>
-                        <h5 className='logo-txt-color text-center mb-4'>Оставь заявку прямо сейчас!</h5>
+                        <h5 className='logo-txt-color text-center mb-4'>{t("leave_request_now")}</h5>
                         <form >
                             <input
-                                placeholder="Имя фамилия"
+                                placeholder={t("placeholderName")}
                                 type="text"
                                 name="fullName"
                                 className="mb-3 form"
@@ -489,14 +489,14 @@ function Home() {
                             />
 
                             <input
-                                placeholder="Номер телефона"
+                                placeholder={t("placeholderPhone")}
                                 type="tel"
                                 name="telephone"
                                 className="mb-3 form"
                                 required
                             />
                             <textarea
-                                placeholder="Сообщение "
+                                placeholder={t("placeholderMessage")}
                                 name="message"
                                 className="mb-3 form"
                                 rows={4}
@@ -504,7 +504,7 @@ function Home() {
                             />
                             <div className="text-center d-grid gap-2  mx-auto"  >
                                 <MDBBtn type="submit" color="" className="text-white fw-bolder" style={{ backgroundColor: '#1c3f7e' }}>
-                                    Отправить
+                                    {t("buttonSend")}
                                 </MDBBtn>
                             </div>
                         </form>

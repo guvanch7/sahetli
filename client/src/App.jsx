@@ -363,7 +363,7 @@ function App() {
               </section>
 
               <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-                <p>© Sahetli Hyzmat. Ähli hukuklar goragly</p>
+                <p>{t("copyright_notice")}</p>
               </div>
             </MDBFooter>
 

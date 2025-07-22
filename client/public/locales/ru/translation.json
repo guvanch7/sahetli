@@ -70,7 +70,13 @@
   "responsive_service": "Быстро реагируем на запросы, адаптируемся под задачи, обеспечиваем своевременные поставки и выполнение.",
   "expertise_and_support": "Экспертизу и поддержку",
   "deep_industry_understanding": "Глубокое понимание отрасли позволяет предлагать обоснованные и грамотные технические решения.",
-
+  "clear_and_quick_explanation": "Мы быстро и ясно разъясняем любые ваши вопросы.",
+  "best_solutions_offer": "Мы готовы предложить вам наилучшие решения. Мы будем тесно работать с вами на каждом этапе и предоставлять необходимые консультации.",
+ "experienced_specialists": "Опытные специалисты",
+  "transparent_conditions": "Прозрачные условия",
+  "reliability_and_responsibility": "Надёжность и ответственность",
+  "individual_approach": "Индивидуальный подход",
+  "leave_request_now": "Оставь заявку прямо сейчас!",
 
     "servicesTurkmen": "Услуги",
     "qualityAndSafetyServices": "Услуги лаборатории по качеству и охране труда",
@@ -96,5 +102,7 @@
     "placeholderName": "Имя",
     "placeholderPhone": "Номер телефона",
     "placeholderMessage": "Сообщение",
-    "buttonSend": "Отправить"
+    "buttonSend": "Отправить",
+      "copyright_notice": "© Sahetli Hyzmat. Все права защищены."
+
 }
