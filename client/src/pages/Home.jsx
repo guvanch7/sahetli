@@ -325,7 +325,7 @@ function Home() {
                                 </div>
                                 <h5 className='text-black'> {t("video_diagnostics")}</h5>
                                 <p>
-                                    {t("video_diagnostics")}
+                                    {/* {t("video_diagnostics")} */}
                                     <br />
                                     <br />
 
