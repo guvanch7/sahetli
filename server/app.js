@@ -28,7 +28,7 @@ function sendEmail({ email, subject, message, emailAddress, phone, name }) {
 
     const mail_configs = {
       from: "k.guvanch@sanly.tm",
-      to: email,
+      to: "info@sahetli.com",
       name: name,
       phone: phone,
       subject: subject,

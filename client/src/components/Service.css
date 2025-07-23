@@ -25,3 +25,7 @@
    display: none;
  }
  
+
+ .nav-tabs .nav-link {
+  padding: 2rem unset
+}

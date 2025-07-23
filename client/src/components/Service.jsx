@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './Service.css';
 import {
     MDBContainer, MDBRow, MDBCol, MDBTabs,
     MDBTabsItem,
@@ -7,7 +8,7 @@ import {
     MDBTabsPane
 } from "mdb-react-ui-kit";
 import { motion, AnimatePresence } from "framer-motion";
-import './Service.css';
+import '../App.css';
 import { useTranslation } from 'react-i18next';
 
 import slider1 from '../assets/sliders/slider1.jpg';
@@ -184,20 +185,20 @@ const Service = () => {
                 <MDBCol lg={6}>
                     <MDBTabs className='mb-3'>
 
-                        <MDBTabsItem>
-                            <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
+                        <MDBTabsItem style={{padding:'2rem unset'}}>
+                            <MDBTabsLink style={{padding:'1rem 0'}} onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
                                 {t("about_us")}
                             </MDBTabsLink>
                         </MDBTabsItem>
 
                         <MDBTabsItem>
-                            <MDBTabsLink onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
+                            <MDBTabsLink style={{padding:'1rem 0'}} onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
                                 {t("our_vision")}
                             </MDBTabsLink>
                         </MDBTabsItem>
 
                         <MDBTabsItem>
-                            <MDBTabsLink className="text-left" onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
+                            <MDBTabsLink style={{padding:'1rem 0'}} className="text-left" onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
                                 {t("our_mission")}
                             </MDBTabsLink>
                         </MDBTabsItem>
@@ -209,7 +210,7 @@ const Service = () => {
 
 
 
-                            <div className='d-flex mt-5 '>
+                            <div className='d-flex mt-4 '>
                                 <div className='line3'></div>
                                 <h4 className='logo-txt-color fw-bolder mb-2' >{t("ourCompany")}</h4>
                             </div>
