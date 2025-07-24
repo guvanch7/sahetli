@@ -77,7 +77,7 @@ function Contact() {
 
             <MDBContainer>
                 <MDBRow className=''>
-                    <MDBCol lg={6}>
+                    {/* <MDBCol lg={6}>
                         <div className='map-container' style={{ position: 'relative', overflow: 'hidden', borderRadius: '50px' }}>
                             <a
                                 href="https://yandex.ru/maps/10324/ashgabat/?utm_medium=mapframe&utm_source=maps"
@@ -102,9 +102,9 @@ function Contact() {
                             ></iframe>
                         </div>
 
-                    </MDBCol>
+                    </MDBCol> */}
 
-                    <MDBCol className='' lg={5}>
+                    <MDBCol className='' lg={12}>
                         <h3 className='text-black'>
                             {t("navLink4")}
                         </h3>
